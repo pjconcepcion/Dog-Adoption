@@ -297,7 +297,6 @@
         </div>
 
         <div class="modal-body">
-            <hr>
             <p> Do you really want to delete <strong id="deleteDogName"></strong>'s record?</p>
         </div>
         <div class="modal-footer">
