@@ -79,9 +79,24 @@
                           <td>{{$allDog -> strSex}}</td>
                           <td>{{$allDog -> strAge}}</td>
                           <td>
-                            <button  data-toggle="modal" id="btnViewDogModal" data-id="{{$allDog -> intDogID}}" data-name="{{$allDog -> strDogName}}" data-pic="{{$allDog -> imgDogPhoto}}" type="submit" class="btn btn-sm btn-outline-primary"><i class="fa fa-eye"></i> </button>
-                            <button class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i></button>
-                            <button  data-toggle="modal" id="btnDeleteDogModal" data-id="{{$allDog -> intDogID}}" data-name="{{$allDog -> strDogName}}" type="submit" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i> </button>
+                            <button  data-toggle="modal" id="btnViewDogModal"
+                                data-pic="{{$allDog -> imgDogPhoto}}"
+                                data-id="{{$allDog -> intDogID}}" 
+                                data-name="{{$allDog -> strDogName}}"
+                                data-age="{{$allDog -> strAge}}"
+                                data-sex="{{$allDog -> strSex}}"
+                                data-condition="{{$allDog -> strCondition}}" 
+                                data-description="{{$allDog -> strDescription}}" 
+                                type="submit" class="btn btn-sm btn-outline-primary"><i class="fa fa-eye"></i> </button>
+                            <button  data-toggle="modal" id="btnViewDogModal" 
+                                data-id="{{$allDog -> intDogID}}" 
+                                data-name="{{$allDog -> strDogName}}"
+                                data-age="{{$allDog -> strAge}}"
+                                data-sex="{{$allDog -> strSex}}"
+                                data-condition="{{$allDog -> strCondition}}"
+                                data-description="{{$allDog -> strDescription}}" 
+                                type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i> </button>
+                            <button  data-toggle="modal" id="btnDeleteDogModal" data-dogid="{{$allDog -> intDogID}}" data-name="{{$allDog -> strDogName}}" type="submit" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i> </button>
                           </td>
                         </tr>
                     @endforeach
@@ -197,17 +212,48 @@
         </div>
 
         <div class="modal-body">
-            <input type="hidden" name="_token" value="{{csrf_token()}}">
             <input type="hidden" id="productID" name="productID">
             <center><img class="modal-content" style= "height: 300px; width: auto; border: 2px solid gray; padding: 2px;" id="dogImage"></center>
             <hr>
             
             <div class="row form-group">
                 <div class="col col-md-3">
-                    <label for="dogname" class=" form-control-label">Dog Name</label>
+                    <label for="dognameview" class=" form-control-label">Dog Name</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="text" id="dogname" name="dogname" class="form-control" readonly>
+                    <input type="text" id="dognameview" name="name" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="dogsexview" class=" form-control-label">Sex</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="dogsexview" name="sex" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="dogageview" class=" form-control-label">Age</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="dogageview" name="age" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="dogconditionview" class=" form-control-label">Condition</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="dogconditionview" name="condition" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="dogdescriptionview" class=" form-control-label">Description</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <textarea rows="10" style="width:100%;" id="dogdescriptionview" name="description" class="form-control" readonly></textarea>
                 </div>
             </div>
         </div>
@@ -222,7 +268,11 @@
 <script type="text/javascript">
     $(document).ready(function(){
        $(document).on('click','#btnViewDogModal',function(){
-        $('#dogname').val($(this).data('name'));
+        $('#dognameview').val($(this).data('name'));
+        $('#dogageview').val($(this).data('age'));
+        $('#dogsexview').val($(this).data('sex'));
+        $('#dogconditionview').val($(this).data('condition'));
+        $('#dogdescriptionview').val($(this).data('description'));;
         
         var newSrc=$(this).data('pic');
         $('#dogImage').attr('src',newSrc);
@@ -247,14 +297,15 @@
         </div>
 
         <div class="modal-body">
-
-            <input type="hidden" name="_token" value="{{csrf_token()}}">
-            <input type="hidden" id="deleteDogID" name="dogID">
             <hr>
             <p> Do you really want to delete <strong id="deleteDogName"></strong>'s record?</p>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+            <form enctype="multipart/form-data" action="/adminDogs/deleteDog" method="post">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <input type="hidden" id="deleteDogID" name="dogID">
+                <input type="submit" class="btn btn-danger" value="Yes">
+            </form>                
             <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
         </div>
       </div>
@@ -265,7 +316,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
        $(document).on('click','#btnDeleteDogModal',function(){
-        $('#deleteDogID').val($(this).data('id'));
+        $('#deleteDogID').val($(this).data('dogid'));
 
         var name = $(this).data('name');
         $('#deleteDogName').html(name);

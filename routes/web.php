@@ -7,6 +7,7 @@
 		//Dogs
 		Route::resource('/adminDogs', 'adminDogsController');
 		Route::post('/adminDogs/insertDog', 'adminDogsController@insertDog');
+		Route::post('/adminDogs/deleteDog', 'adminDogsController@deleteDog');
 
 		//Adoption Request
 		Route::resource('/adminAdoptionRequest', 'adminAdoptionRequestController');

@@ -31,7 +31,16 @@ class adminDogsController extends Controller
     	// }
 
 
-    	return redirect('/dogs');
-    }
+    	return redirect('/adminDogs');
+	}
+	
+	public function deleteDog(Request $request){
+
+		$dogID = $request -> input('dogID');
+
+    	DB::table('doglisttbl')->where('intDogID', '=', $dogID)->delete();
+
+		return redirect('/adminDogs');
+	}
 
 }
