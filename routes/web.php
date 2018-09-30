@@ -1,7 +1,9 @@
 <?php
 //ADMIN SIDE
+	// Login
+	Route::resource('/admin','adminLoginController');
 	// Dashboard
-	Route::resource('/', 'adminDashboardController');
+	Route::resource('/adminDashboard', 'adminDashboardController');
 
 	// Maintenance
 		//Dogs
@@ -22,3 +24,19 @@
 	//Account
 		//Account Setting
 		Route::resource('/adminAccountSettings', 'adminAccountSettingsController');
+
+//CUSTOMER SIDE
+	//Home
+	Route::resource('/','customerHomeController');
+
+	//Contact
+	Route::resource('/contact','customerContactController');
+
+	//Adopt
+	Route::resource('/adopt','customerAdoptController');
+
+	//Missing
+	Route::resource('/missing','customerMissingController');
+
+	//About
+	Route::resource('/about','customerAboutController');
