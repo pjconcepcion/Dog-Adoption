@@ -56,11 +56,204 @@
             </div>
         </div>
     </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Stray Reports</strong>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Reported by</th>
+                        <th scope="col">Contact No.</th>
+                        <th scope="col">Dog Name</th>
+                        <th scope="col">Date Reported</th>
+                        <th scope="col"> </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($missingReports as $missingReport)
+                            <tr>
+                                <td>{{$missingReport -> strReporterName}}</td> 
+                                <td>{{$missingReport -> strReporterContactNo}}</td> 
+                                <td>{{$missingReport -> strDogName}}</td> 
+                                <td>{{$missingReport -> dtFiledMissing}}</td>
+                                <td>
+                                    <button type="submit" class="btn btn-sm btn-outline-primary"
+                                            data-toggle="modal" id="btnViewMissingReport"
+                                            data-id="{{$missingReport -> intMissingReportID}}"
+                                            data-name="{{$missingReport -> strReporterName}}"
+                                            data-email="{{$missingReport -> strReporterEmail}}"
+                                            data-contact="{{$missingReport -> strReporterContactNo}}"
+                                            data-dogname="{{$missingReport -> strDogName}}"
+                                            data-dogdesc="{{$missingReport -> strDogDescription}}"
+                                            data-notes="{{$missingReport -> strNotes}}"
+                                            data-date="{{$missingReport -> dtFiledMissing}}"
+                                            data-image="{{$missingReport -> imgDogMissing}}"
+                                    ><i class="fa fa-eye"></i> </button> 
+                                    
+                                    @if($missingReport -> bitIsApproved == 0) 
+                                        <button type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-check-circle-o"></i> </button> 
+                                    @else
+                                        <button disabled type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-check-circle-o"></i> </button>
+                                    @endif
+                                    
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" data-toggle="modal" id="btnDeleteMissingReport"><i class="fa fa-trash"></i> </button>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
 </div> <!-- .content -->
 <!-- /#right-panel -->
 
 <!-- Right Panel -->
 
+{{-- View Report --}}
+<div id="viewMissingReportModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+        <div class="modal-header">
+            <h4 class="modal-title"></b><i class="fa fa-exclamation-circle"></i> View Missing Report</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>  
+        </div>
+
+        <div class="modal-body"> 
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="viewDateReported" class=" form-control-label">Date Reported</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="viewDateReported" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="viewReporterName" class=" form-control-label">Reported by</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="viewReporterName" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="viewReporterEmail" class=" form-control-label">Email</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="viewReporterEmail" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="viewReporterContact" class=" form-control-label">Contact No.</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="viewReporterContact" class="form-control" readonly>
+                </div>
+            </div>
+            <hr>
+            <center><img class="modal-content" style= "height: 300px; width: auto; border: 2px solid gray; padding: 2px;" id="missingDogImg"></center>
+            <br>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="viewDogName" class=" form-control-label">Dog Name</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="viewDogName" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="viewDogDescription" class=" form-control-label">Description</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="viewDogDescription" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="viewNotes" class=" form-control-label">Notes</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <textarea row="8"; id="viewNotes" class="form-control" readonly></textarea>
+                </div>  
+            </div> 
+        </div>
+        <div class="modal-footer">            
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).on('click','#btnViewMissingReport', function(){
+        $('#viewDateReported').val($(this).data('date'));
+        $('#viewReporterName').val($(this).data('name'));
+        $('#viewReporterContact').val($(this).data('contact'));
+        $('#viewReporterEmail').val($(this).data('email'));
+        $('#viewDogName').val($(this).data('dogname'));
+        $('#viewDogDescription').val($(this).data('dogdesc'));
+        $('#viewNotes').val($(this).data('notes'));
+        
+        var newSrc=$(this).data('image');
+        $('#missingDogImg').attr('src',newSrc);
+
+        $('#viewMissingReportModal').modal('show');
+        });
+    });
+</script>
+    
+{{-- END --}}
+
+{{-- DELETE Report --}}
+<div id="deleteReportModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+        <div class="modal-header">
+            <h4 class="modal-title"></b><i class="fa fa-trash"></i> Confirm Delete</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>  
+        </div>
+
+        <div class="modal-body">
+            <p> Do you really want to delete this report?</p>
+        </div>
+        <div class="modal-footer">
+            <form enctype="multipart/form-data" action="/adminStrayReports/deleteReport" method="post">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <input type="hidden" id="deleteReportID" name="reportID">
+                <input type="submit" class="btn btn-danger" value="Yes">
+            </form>                
+            <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).on('click','#btnDeleteMissingReport',function(){
+        $('#deleteReportID').val($(this).data('id'));
+
+        $('#deleteReportModal').modal('show');
+        });
+    });
+</script>
+        
+    {{-- END --}}
 
 
 @endsection
