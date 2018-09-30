@@ -17,23 +17,52 @@ class adminDogsController extends Controller
     }
 
     public function insertDog(Request $request){
+		
+		$name = $request -> input('name');
+		$age = $request -> input('age');
+		$sex = $request -> input('sex');
+		$condition = $request -> input('condition');
+		$description = $request -> input('description');
 
-        
-    	// try {
-    	//     $file = $request -> file('dogimage');
-    	//     $name = "image/dogs/".$productname . '.' . $file->getClientOriginalExtension();
+		try {
+            $file = $request -> file('dogimage');
+            $photoname = "/image/dogs/". $name . rand(11111, 99999) .'.' . $file->getClientOriginalExtension();
+			$request -> file('dogimage') -> move("image/dogs", $photoname);
 
-    	//     $request -> file('dogimage') -> move($name);
-    	//     copy($name,"../../SPOnline/public/".$name);
+        } catch (Exception $e) {
+            return view ('index');       
+		}
 
-    	// } catch (Exception $e) {
-    	//     return 'error';
-    	// }
+		$dogRecord = New DogList;
 
+		$dogRecord -> strDogName = $name;
+		$dogRecord -> strAge = $age;
+		$dogRecord -> strSex = $sex;
+		$dogRecord -> strCondition = $condition;
+		$dogRecord -> strDescription = $description;
+		$dogRecord -> imgDogPhoto = $photoname;
+		$dogRecord -> bitIsAdopted = 0;
+		$dogRecord -> save();
 
     	return redirect('/adminDogs');
 	}
 	
+	public function editDog(Request $request){
+
+		$dogID = $request -> input('dogID');
+		$name = $request -> input('name');
+		$age = $request -> input('age');
+		$sex = $request -> input('sex');
+		$condition = $request -> input('condition');
+		$description = $request -> input('description');
+
+		DB::table('doglisttbl')
+			->where('intDogID', $dogID)
+			->update(['strDogName' => $name, 'strAge' => $age, 'strSex' => $sex, 'strCondition' => $condition, 'strDescription' => $description]);
+		
+		return redirect('/adminDogs');
+	}
+
 	public function deleteDog(Request $request){
 
 		$dogID = $request -> input('dogID');

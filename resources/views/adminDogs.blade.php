@@ -60,7 +60,7 @@
     <div class="col-lg-7">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">List of All Dogs Up for Adoption</strong>
+                <center><strong class="card-title"><i class="fa fa-paw"></i> Dog Records <i class="fa fa-paw"></i></strong></center>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -69,35 +69,54 @@
                       <th scope="col">Dog Name</th>
                       <th scope="col">Sex</th>
                       <th scope="col">Age</th>
+                      <th scope="col">Adopted?</th>
                       <th scope="col"> </th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach($allDogs as $allDog)
                         <tr>
-                          <td>{{$allDog -> strDogName}}</td>
-                          <td>{{$allDog -> strSex}}</td>
-                          <td>{{$allDog -> strAge}}</td>
-                          <td>
-                            <button  data-toggle="modal" id="btnViewDogModal"
-                                data-pic="{{$allDog -> imgDogPhoto}}"
-                                data-id="{{$allDog -> intDogID}}" 
-                                data-name="{{$allDog -> strDogName}}"
-                                data-age="{{$allDog -> strAge}}"
-                                data-sex="{{$allDog -> strSex}}"
-                                data-condition="{{$allDog -> strCondition}}" 
-                                data-description="{{$allDog -> strDescription}}" 
-                                type="submit" class="btn btn-sm btn-outline-primary"><i class="fa fa-eye"></i> </button>
-                            <button  data-toggle="modal" id="btnViewDogModal" 
-                                data-id="{{$allDog -> intDogID}}" 
-                                data-name="{{$allDog -> strDogName}}"
-                                data-age="{{$allDog -> strAge}}"
-                                data-sex="{{$allDog -> strSex}}"
-                                data-condition="{{$allDog -> strCondition}}"
-                                data-description="{{$allDog -> strDescription}}" 
-                                type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i> </button>
-                            <button  data-toggle="modal" id="btnDeleteDogModal" data-dogid="{{$allDog -> intDogID}}" data-name="{{$allDog -> strDogName}}" type="submit" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i> </button>
-                          </td>
+                            <td>{{$allDog -> strDogName}}</td>
+                            <td>{{$allDog -> strSex}}</td>
+                            <td>{{$allDog -> strAge}}</td>
+                            @if($allDog -> bitIsAdopted == 0)
+                                <td>Not yet</td>
+                                <td>
+                                    <button  data-toggle="modal" id="btnViewDogModal"
+                                        data-pic="{{$allDog -> imgDogPhoto}}"
+                                        data-id="{{$allDog -> intDogID}}" 
+                                        data-name="{{$allDog -> strDogName}}"
+                                        data-age="{{$allDog -> strAge}}"
+                                        data-sex="{{$allDog -> strSex}}"
+                                        data-condition="{{$allDog -> strCondition}}" 
+                                        data-description="{{$allDog -> strDescription}}" 
+                                        type="submit" class="btn btn-sm btn-outline-primary"><i class="fa fa-eye"></i> </button>
+                                    <button  data-toggle="modal" id="btnEditDogModal" 
+                                        data-id="{{$allDog -> intDogID}}" 
+                                        data-name="{{$allDog -> strDogName}}"
+                                        data-age="{{$allDog -> strAge}}"
+                                        data-sex="{{$allDog -> strSex}}"
+                                        data-condition="{{$allDog -> strCondition}}"
+                                        data-description="{{$allDog -> strDescription}}" 
+                                        type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i> </button>
+                                    <button  data-toggle="modal" id="btnDeleteDogModal" data-dogid="{{$allDog -> intDogID}}" data-name="{{$allDog -> strDogName}}" type="submit" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i> </button>
+                                </td>
+                            @else
+                                <td>Yes</td>
+                                <td>
+                                    <button  data-toggle="modal" id="btnViewDogModal"
+                                        data-pic="{{$allDog -> imgDogPhoto}}"
+                                        data-id="{{$allDog -> intDogID}}" 
+                                        data-name="{{$allDog -> strDogName}}"
+                                        data-age="{{$allDog -> strAge}}"
+                                        data-sex="{{$allDog -> strSex}}"
+                                        data-condition="{{$allDog -> strCondition}}" 
+                                        data-description="{{$allDog -> strDescription}}" 
+                                        type="submit" class="btn btn-sm btn-outline-primary"><i class="fa fa-eye"></i> </button>
+                                    <button  data-toggle="modal" id="btnEditDogModal" disabled type="submit" class="btn btn-sm btn-success"><i class="fa fa-edit"></i> </button>
+                                    <button  data-toggle="modal" id="btnDeleteDogModal" data-dogid="{{$allDog -> intDogID}}" data-name="{{$allDog -> strDogName}}" type="submit" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i> </button>
+                                </td>
+                            @endif
                         </tr>
                     @endforeach
                   </tbody>
@@ -140,11 +159,11 @@
                         <div class="col col-md-9">
                             <div class="form-check-inline form-check">
                                 <label for="inline-radio1" class="form-check-label ">
-                                        <input type="radio" id="inline-radio1" name="gender" value="Female" class="form-check-input" required >Female
+                                        <input type="radio" id="inline-radio1" name="sex" value="Female" class="form-check-input" required >Female
                                 </label>
                                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                                 <label for="inline-radio2" class="form-check-label ">
-                                    <input type="radio" id="inline-radio2" name="gender" value="Male" class="form-check-input" required>Male
+                                    <input type="radio" id="inline-radio2" name="sex" value="Male" class="form-check-input" required>Male
                                 </label>
                             </div>
                         </div>
@@ -163,7 +182,7 @@
                             <label for="text-input" class=" form-control-label">Condition</label>
                         </div>
                         <div class="col-12 col-md-9">
-                            <input type="text" id="text-input" name="age" placeholder="" class="form-control">
+                            <input type="text" id="text-input" name="condition" placeholder="" class="form-control">
                             <small class="form-text text-muted">(e.g. Healthy, With special care needed)</small>
                         </div>
                     </div>
@@ -172,15 +191,13 @@
                             <label for="textarea-input" class=" form-control-label">Description</label>
                         </div>
                         <div class="col-12 col-md-9">
-                            <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Tell us about the dog..." class="form-control"></textarea>
+                            <textarea name="description" id="textarea-input" rows="9" placeholder="Tell us about the dog..." class="form-control"></textarea>
                         </div>
                     </div>
 
                     <div class="card-footer">
                         <center>
-                            <button type="submit" class="btn btn-primary btn-sm">
-                              <i class="fa fa-dot-circle-o"></i> Submit
-                            </button>
+                            <input type="submit" class="btn btn-primary btn-sm" value="Submit">
                             <button type="reset" class="btn btn-danger btn-sm">
                               <i class="fa fa-ban"></i> Reset
                             </button>
@@ -197,7 +214,7 @@
 
 </div> <!-- .content -->
 <!-- /#right-panel -->
-
+<!-- Right Panel -->
 
 {{-- VIEW DOG --}}
 
@@ -207,7 +224,8 @@
       <div class="modal-content">
 
         <div class="modal-header">
-            <h4 class="modal-title"></b><i class="fa fa-paw"></i> View</h4>
+            <h4 class="modal-title"><i class="fa fa-paw"></i>&nbsp;</h4>
+            <h4 class="modal-title" id="DogName"></b></h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>  
         </div>
 
@@ -268,6 +286,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
        $(document).on('click','#btnViewDogModal',function(){
+        var name = $(this).data('name');
+        $('#DogName').html(name);
+
         $('#dognameview').val($(this).data('name'));
         $('#dogageview').val($(this).data('age'));
         $('#dogsexview').val($(this).data('sex'));
@@ -281,6 +302,96 @@
        });
     });
 </script>
+
+{{-- END --}}
+
+{{-- EDIT DOG --}}
+<div id="editDogModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <!-- Modal content-->
+            <div class="modal-content">
+    
+                <div class="modal-header">
+                    <h4 class="modal-title"></b><i class="fa fa-edit"></i> Edit</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>  
+                </div>
+                <form enctype="multipart/form-data" action="/adminDogs/editDog" method="post" autocomplete="off">
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                    <input type="hidden" id="dogidedit" name="dogID">
+                    <div class="modal-body">             
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="dognameedit" class=" form-control-label">Dog Name</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="dognameedit" name="name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Sex</label>
+                                </div>
+                                <div class="col col-md-9">
+                                    <div class="form-check-inline form-check">
+                                        <label for="inline-radio1" class="form-check-label ">
+                                                <input type="radio" id="inline-radio1" name="sex" value="Female" class="form-check-input" required >Female
+                                        </label>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                        <label for="inline-radio2" class="form-check-label ">
+                                            <input type="radio" id="inline-radio2" name="sex" value="Male" class="form-check-input" required>Male
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="dogageedit" class=" form-control-label">Age</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="dogageedit" name="age" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="dogconditionedit" class=" form-control-label">Condition</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="dogconditionedit" name="condition" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="dogdescriptionedit" class=" form-control-label">Description</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <textarea rows="8" style="width:100%;" id="dogdescriptionedit" name="description" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-success" value="Confirm">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $(document).on('click','#btnEditDogModal',function(){
+            $('#dogidedit').val($(this).data('id'));
+            $('#dognameedit').val($(this).data('name'));
+            $('#dogageedit').val($(this).data('age'));
+            $('#dogsexedit').val($(this).data('sex'));
+            $('#dogconditionedit').val($(this).data('condition'));
+            $('#dogdescriptionedit').val($(this).data('description'));;
+
+            $('#editDogModal').modal('show');
+           });
+        });
+    </script>
 
 {{-- END --}}
 
@@ -327,7 +438,6 @@
 
 {{-- END --}}
 
-<!-- Right Panel -->
 <script>
     $(function() {
         // Multiple images preview in browser
