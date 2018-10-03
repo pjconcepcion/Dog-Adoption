@@ -5,33 +5,75 @@
     <section class="home-slider owl-carousel">
         <div class="slider-item" style="background-image: url('customer/img/slider-1.jpg');">
         
-        <div class="container">
-            <div class="row slider-text align-items-center justify-content-center">
-            <div class="col-md-8 text-center col-sm-12 element-animate">
-                <h1>We Love Pets</h1>
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
-                <p><a href="#" class="btn btn-white btn-outline-white">Get Started</a> <a href="#" class="btn btn-link btn-white">Download</a></p>
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center">
+                    <div class="col-md-8 text-center col-sm-12 element-animate">
+                        <h1>We Love Pets</h1>   
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                        <p><a href="/adopt" class="btn btn-white btn-outline-white">Adopt-a-Dog</a></p>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
 
         </div>
 
         <div class="slider-item" style="background-image: url('customer/img/slider-2.jpg');">
-        <div class="container">
-            <div class="row slider-text align-items-center justify-content-center">
-            <div class="col-md-8 text-center col-sm-12 element-animate">
-                <h1>Care for dogs</h1>
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
-                <p><a href="#" class="btn btn-white btn-outline-white">Get Started</a> <a href="#" class="btn btn-link btn-white">Download</a></p>
-            </div>
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center">
+                    <div class="col-md-8 text-center col-sm-12 element-animate">
+                        <h1>Help us find them!</h1>
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                        <p><a href="/contact" class="btn btn-white btn-outline-white">Contact Us</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-        
+
+        <div class="slider-item" style="background-image: url('customer/img/slider-3.jpg');">
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center">
+                <div class="col-md-8 text-center col-sm-12 element-animate">
+                    <h1>Let us help!</h1>
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                    <p><a href="/missing/file" class="btn btn-white btn-outline-white">File a missing report</a></p>
+                </div>
+                </div>
+            </div>
         </div>
 
     </section>
     <!-- END slider -->
+    <section class="section border-t">
+        <div class="container">
+            <div class="row justify-content-center mb-5 element-animate">
+                <div class="col-md-8 text-center">
+                <h2 class=" heading mb-4">Adopt-a-Dog</h2>
+                <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                </div>
+            </div>
+
+            <div class="row no-gutters">
+                @foreach($dogLists as $dogList)
+                <div class="col-md-4 element-animate">
+                    <a href="/adopt/{{$dogList -> intDogID}}" class="link-thumbnail">
+                        <h3>{{$dogList -> strSex}}, {{$dogList -> strAge}}</h3>
+                        <span class=" icon">{{$dogList -> strDogName}}</span>
+                        <div class = "crop">
+                            <img src="{{$dogList -> imgDogPhoto}}" alt="Image placeholder" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+            </div>
+            <div class="col-md-8 text-center col-sm-12 element-animate mx-auto">
+                <br/>
+                <br/>
+                <p><a href="/adopt" class="btn btn-block btn-outline-black">Adopt-a-Dog</a></p>
+            </div>
+        </div>
+    </section>
+        <!-- END section -->
+    
 
     <section class="section element-animate">
         <div class="container">
@@ -59,113 +101,6 @@
         </div>
         </div>
     </section>
-
-    <section class="section bg-light">
-        <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-            <div class="col-md-8 text-center">
-            <h2 class=" heading mb-4">Every Dog Needs A Good Owner</h2>
-            <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
-            </div>
-        </div>
-        <div class="row element-animate">
-            <div class="major-caousel js-carousel-1 owl-carousel">
-            <div>
-                <div class="media d-block media-custom text-center">
-                <a href="adoption-single.html"><img src="customer/img/person_1.jpg" alt="Image Placeholder" class="img-fluid"></a>
-                <div class="media-body">
-                    <h3 class="mt-0 text-black">Mellisa Howard</h3>
-                </div>
-                </div>
-            </div>
-            <div>
-                <div class="media d-block media-custom text-center">
-                <a href="adoption-single.html"><img src="customer/img/person_2.jpg" alt="Image Placeholder" class="img-fluid"></a>
-                <div class="media-body">
-                    <h3 class="mt-0 text-black">Mike Richardson</h3>
-                </div>
-                </div>
-            </div>
-            <div>
-                <div class="media d-block media-custom text-center">
-                <a href="adoption-single.html"><img src="customer/img/person_3.jpg" alt="Image Placeholder" class="img-fluid"></a>
-                <div class="media-body">
-                    <h3 class="mt-0 text-black">Charles White</h3>
-                </div>
-                </div>
-            </div>
-            <div>
-                <div class="media d-block media-custom text-center">
-                <a href="adoption-single.html"><img src="customer/img/person_4.jpg" alt="Image Placeholder" class="img-fluid"></a>
-                <div class="media-body">
-                    <h3 class="mt-0 text-black">Laura Smith</h3>
-                </div>
-                </div>
-            </div>
-            </div>
-            <!-- END slider -->
-        </div>
-        </div>
-    </section>
-    <!-- END section -->
-
-    <section class="section border-t">
-        <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-            <div class="col-md-8 text-center">
-            <h2 class=" heading mb-4">Dog Breed Collections</h2>
-            <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
-            </div>
-        </div>
-
-        <div class="row no-gutters">
-            <div class="col-md-4 element-animate">
-            <a href="single.html" class="link-thumbnail">
-                <h3>German Shepherd</h3>
-                <span class="ion-plus icon"></span>
-                <img src="customer/img/dog_1.jpg" alt="Image placeholder" class="img-fluid">
-            </a>
-            </div>
-            <div class="col-md-4 element-animate">
-            <a href="single.html" class="link-thumbnail">
-                <h3>Labrador</h3>
-                <span class="ion-plus icon"></span>
-                <img src="customer/img/dog_2.jpg" alt="Image placeholder" class="img-fluid">
-            </a>
-            </div>
-            <div class="col-md-4 element-animate">
-            <a href="single.html" class="link-thumbnail">
-                <h3>Bulldog</h3>
-                <span class="ion-plus icon"></span>
-                <img src="customer/img/dog_3.jpg" alt="Image placeholder" class="img-fluid">
-            </a>
-            </div>
-            <div class="col-md-4 element-animate">
-            <a href="single.html" class="link-thumbnail">
-                <h3>Rottweiler</h3>
-                <span class="ion-plus icon"></span>
-                <img src="customer/img/dog_4.jpg" alt="Image placeholder" class="img-fluid">
-            </a>
-            </div>
-            <div class="col-md-4 element-animate">
-            <a href="single.html" class="link-thumbnail">
-                <h3>Beagle</h3>
-                <span class="ion-plus icon"></span>
-                <img src="customer/img/dog_5.jpg" alt="Image placeholder" class="img-fluid">
-            </a>
-            </div>
-            <div class="col-md-4 element-animate">
-            <a href="single.html" class="link-thumbnail">
-                <h3>Golden Retriever</h3>
-                <span class="ion-plus icon"></span>
-                <img src="customer/img/dog_6.jpg" alt="Image placeholder" class="img-fluid">
-            </a>
-            </div>
-        </div>
-        
-        </div>
-    </section>
-    <!-- END section -->
 
     <section class="section blog">
         <div class="container">

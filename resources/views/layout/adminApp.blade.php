@@ -62,7 +62,7 @@
 	<div id="main-menu" class="main-menu collapse navbar-collapse">
 	<ul class="nav navbar-nav">
 	    <li>
-	        <a href="/"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+	        <a href="/adminDashboard"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
 	    </li>
 	    <h3 class="menu-title">Maintenance</h3><!-- /.menu-title -->
 	    <li class="menu-item-has-children dropdown">
