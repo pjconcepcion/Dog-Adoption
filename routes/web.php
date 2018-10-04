@@ -9,6 +9,7 @@
 	// Maintenance
 		//Dogs
 		Route::resource('/adminDogs', 'adminDogsController');
+		Route::post('/adminSearchedDogs', 'adminDogsController@searchDog');
 		Route::post('/adminDogs/insertDog', 'adminDogsController@insertDog');
 		Route::post('/adminDogs/editDog', 'adminDogsController@editDog');
 		Route::post('/adminDogs/deleteDog', 'adminDogsController@deleteDog');
@@ -18,10 +19,14 @@
 
 		//Missing Reports
 		Route::resource('/adminMissingReports', 'adminMissingReportsController');
+		Route::post('/adminSearchedMissingReports', 'adminMissingReportsController@searchReport');
+		Route::post('/adminMissingReports/deleteReport', 'adminMissingReportsController@deleteReport');
+		Route::post('/adminMissingReports/approveReport', 'adminMissingReportsController@approveReport');
 
 	//Messages
 		//Stray Reports
 		Route::resource('/adminStrayReports', 'adminStrayReportsController');
+		Route::post('/adminSearchedStrayReports', 'adminStrayReportsController@searchStrayReport');
 		Route::post('/adminStrayReports/sendReply', 'adminStrayReportsController@replyStrayReport');
 		Route::post('/adminStrayReports/deleteReport', 'adminStrayReportsController@deleteReport');
 

@@ -17,6 +17,16 @@ class adminStrayReportsController extends Controller
     	return view('adminStrayReports')->with('strayReports', $strayReport);	
     }
 
+    public function searchStrayReport (Request $request){
+
+        $search = "%" . $request -> input('search') . "%";
+
+        $strayReport = StrayReports::where(DB::raw("CONCAT(`strReporterName`, `strReporterEmail`, `strStreetName`, `strBarangay`, `strCity`, `strDogDescription`, `dtReportDate`)"), 'LIKE', $search)->get();
+ 
+    	return view('adminStrayReports')->with('strayReports', $strayReport);	    	
+    	
+    }
+
     public function deleteReport(Request $request){
 
         $reportID = $request -> input('reportID');

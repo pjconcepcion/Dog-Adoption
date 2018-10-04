@@ -13,9 +13,11 @@
                 <div class="header-left">
                     <button class="search-trigger"><i class="fa fa-search"></i></button>
                     <div class="form-inline">
-                        <form class="search-form">
-                            <input class="form-control" type="text" placeholder="Search ..." aria-label="Search">
-                            <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                        <form autocomplete="off" class="search-form" enctype="multipart/form-data" action="/adminSearchedStrayReports" method="post">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            <input class="form-control" name="search" type="text" placeholder="Search ..." aria-label="Search">
+                            <input class="form-control" value="search" type="submit" >
+                            <button class="search-close"><i class="fa fa-close"></i></button>
                         </form>
                     </div>
                     <div class="dropdown for-notification">

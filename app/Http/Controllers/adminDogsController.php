@@ -14,6 +14,16 @@ class adminDogsController extends Controller
 
     	return view('adminDogs')->with('allDogs', $allDog);
     	
+	}
+	
+	public function searchDog (Request $request){
+
+        $search = "%" . $request -> input('search') . "%";
+
+        $allDog = DogList::where(DB::raw("CONCAT(`strDogName`, `strAge`, `strSex`, `strCondition`, `strDescription`)"), 'LIKE', $search)->get();
+ 
+    	return view('adminDogs')->with('allDogs', $allDog);
+    	
     }
 
     public function insertDog(Request $request){

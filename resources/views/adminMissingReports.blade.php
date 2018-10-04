@@ -13,9 +13,11 @@
                 <div class="header-left">
                     <button class="search-trigger"><i class="fa fa-search"></i></button>
                     <div class="form-inline">
-                        <form class="search-form">
-                            <input class="form-control" type="text" placeholder="Search ..." aria-label="Search">
-                            <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                        <form class="search-form" enctype="multipart/form-data" action="/adminSearchedMissingReports" method="post">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            <input class="form-control" name="search" type="text" placeholder="Search ..." aria-label="Search">
+                            <input class="form-control" value="search" type="submit" >
+                            <button class="search-close"><i class="fa fa-close"></i></button>
                         </form>
                     </div>
                     <div class="dropdown for-notification">
@@ -60,7 +62,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Stray Reports</strong>
+                <strong class="card-title">Missing Reports</strong>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -95,12 +97,18 @@
                                     ><i class="fa fa-eye"></i> </button> 
                                     
                                     @if($missingReport -> bitIsApproved == 0) 
-                                        <button type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-check-circle-o"></i> </button> 
+                                        <button type="submit" class="btn btn-sm btn-outline-success"
+                                            data-toggle="modal" id="btnApproveMissingReport"
+                                            data-id="{{$missingReport -> intMissingReportID}}"
+                                            data-name="{{$missingReport -> strReporterName}}"
+                                            data-email="{{$missingReport -> strReporterEmail}}"
+                                            data-dogname="{{$missingReport -> strDogName}}"
+                                        ><i class="fa fa-check-circle-o"></i> </button> 
                                     @else
                                         <button disabled type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-check-circle-o"></i> </button>
                                     @endif
                                     
-                                    <button type="submit" class="btn btn-sm btn-outline-danger" data-toggle="modal" id="btnDeleteMissingReport"><i class="fa fa-trash"></i> </button>
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" data-toggle="modal" id="btnDeleteMissingReport" data-id="{{$missingReport -> intMissingReportID}}"><i class="fa fa-trash"></i> </button>
                                 </td>
                             </tr>
                         @endforeach
@@ -217,7 +225,7 @@
 {{-- END --}}
 
 {{-- DELETE Report --}}
-<div id="deleteReportModal" class="modal fade" role="dialog">
+<div id="deleteMissingReport" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -231,7 +239,7 @@
             <p> Do you really want to delete this report?</p>
         </div>
         <div class="modal-footer">
-            <form enctype="multipart/form-data" action="/adminStrayReports/deleteReport" method="post">
+            <form enctype="multipart/form-data" action="/adminMissingReports/deleteReport" method="post">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <input type="hidden" id="deleteReportID" name="reportID">
                 <input type="submit" class="btn btn-danger" value="Yes">
@@ -248,12 +256,56 @@
         $(document).on('click','#btnDeleteMissingReport',function(){
         $('#deleteReportID').val($(this).data('id'));
 
-        $('#deleteReportModal').modal('show');
+        $('#deleteMissingReport').modal('show');
         });
     });
 </script>
         
-    {{-- END --}}
+{{-- END --}}
 
+{{-- DELETE Report --}}
+<div id="approveMissingReport" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+        <div class="modal-header">
+            <h4 class="modal-title"></b><i class="fa fa-check-circle-o"></i> Approve Report</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>  
+        </div>
+
+        <div class="modal-body">
+            <p> Do you want to approve this missing report and post it on the main page?</p>
+        </div>
+        <div class="modal-footer">
+            <form enctype="multipart/form-data" action="/adminMissingReports/approveReport" method="post">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <input type="hidden" id="reportID" name="reportID">
+                <input type="hidden" id="name" name="name">
+                <input type="hidden" id="email" name="email">
+                <input type="hidden" id="dogname" name="dogname">
+                <input type="submit" class="btn btn-danger" value="Yes">
+            </form>                
+            <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).on('click','#btnApproveMissingReport',function(){
+        $('#reportID').val($(this).data('id'));
+        $('#name').val($(this).data('name'));
+        $('#email').val($(this).data('email'));
+        $('#dogname').val($(this).data('dogname'));
+
+        $('#approveMissingReport').modal('show');
+        });
+    });
+</script>
+        
+{{-- END --}}
 
 @endsection
