@@ -3,7 +3,7 @@
 @section('content')
 
     <section class="home-slider inner-page owl-carousel">
-        <div class="slider-item" style="background-image: url('img/slider-1.jpg');">
+        <div class="slider-item" style="background-image: url('customer/img/slider-1.jpg');">
           
           <div class="container">
             <div class="row slider-text align-items-center justify-content-center">

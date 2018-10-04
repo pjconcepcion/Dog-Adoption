@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Colorlib Breed</title>
+        <title>Dog Adoption</title>
         <meta charset="utf-8">
+        <meta name="csrf-token" content="{{csrf_token()}}">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
@@ -13,7 +14,7 @@
 
         <link rel="stylesheet" href={{asset("customer/fonts/ionicons/css/ionicons.min.css")}}>
         <link rel="stylesheet" href={{asset("customer/fonts/fontawesome/css/font-awesome.min.css")}}>
-
+      
         {{-- <link rel="stylesheet" href={{asset("customer/fonts/flaticon/font/flaticon.css")}}> --}}
 
         <!-- Theme Style -->
@@ -24,7 +25,7 @@
         <header role="banner">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand absolute" href="index.html">breed</a>
+                <a class="navbar-brand absolute" href="/">breed</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -101,13 +102,6 @@
           
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 text-md-center text-left">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </div>
-        </div>
       </div>
     </footer>
     <!-- END footer -->
@@ -121,5 +115,33 @@
     <script src={{asset("customer/js/owl.carousel.min.js")}}></script>
     <script src={{asset("customer/js/jquery.waypoints.min.js")}}></script>
     <script src={{asset("customer/js/main.js")}}></script>
+    <script> 
+      var url = window.location.href;
+      var route = url.split('/');
+      var navItem = document.getElementsByClassName('nav-link');
+      for(var ctr=0;ctr<navItem.length;ctr++){
+
+        if(navItem[ctr].classList.contains('active')){
+          navItem[ctr].classList.remove('active');
+        }
+         
+        if(navItem[ctr].innerText.toLowerCase() == route[3]){
+          navItem[ctr].classList.add("active");
+          break;
+        }
+        else if(route[3].search(navItem[ctr].innerText.toLowerCase()) > -1){
+          navItem[ctr].classList.add("active");
+          break;
+        }
+        else if(navItem[ctr].innerText.toLowerCase() == 'adopt-a-dog' && route[3] == 'adopt'){
+          navItem[ctr].classList.add("active");
+          break;  
+        }
+        else if(route[3] == ''){
+          navItem[ctr].classList.add("active");
+          break;
+        }
+      }
+    </script>
   </body>
 </html>

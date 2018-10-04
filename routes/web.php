@@ -2,6 +2,7 @@
 //ADMIN SIDE
 	// Login
 	Route::resource('/admin','adminLoginController');
+	
 	// Dashboard
 	Route::resource('/adminDashboard', 'adminDashboardController');
 
@@ -35,11 +36,18 @@
 	//Contact
 	Route::resource('/contact','customerContactController');
 
+	//Form
+	Route::post('/contact/new','customerContactController@insert');
+
 	//Adopt
 	Route::resource('/adopt','customerAdoptController');
+		Route::get('/adopt/{id}','customerAdoptController@show');
 
 	//Missing
 	Route::resource('/missing','customerMissingController');
+		//File a report
+		Route::get('/missing/file','customerReportMissingController@index');
+		Route::post('/missing/file/submit','customerReportMissingController@submit');
 
 	//About
 	Route::resource('/about','customerAboutController');

@@ -60,6 +60,14 @@ textarea.form-control {
       border-width: 2px; }
   .btn:hover {
     text-decoration: none; }
+  .btn.btn-outline-black{
+    border-width: 2px;
+    border-color: #000;
+    color: #000; }
+    .btn.btn-outline-black:hover{
+      color: #fff;
+      background: #000;
+    }
 
 /* Header */
 header {
@@ -358,6 +366,39 @@ header {
 
 .section {
   padding: 7em 0; }
+
+.crop{
+  width: 400px;
+  height: 400px;
+  overflow: hidden;}
+
+.crop img{
+  width: 500px;
+  height: 500px;
+}
+
+.blur{  
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  height: 800px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: -4;
+}
+
+.scroll{
+  word-wrap: break-word;
+  overflow-y: auto;
+  width:700px;
+  max-height: 100px;
+}
+
+.gallery{
+  overflow: auto;
+  text-align: center;
+  width: 100%;
+}
 
 .section-subscribe {
   padding: 2em 0; }
