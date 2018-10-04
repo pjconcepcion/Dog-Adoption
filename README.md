@@ -1,10 +1,8 @@
 UPDATES:
 
-#Oct. 03, 2018 (10/03/18):
-    - Added functionality in customer UI.
-    - Change "adminApp.blade.php" line 65: 
-        href = "/"  to href = "/adminDashboard" 
-
+#Oct. 04, 2018 (10/04/18):
+    -  Updated Adoption UI
+    
 #Requirement/s:
     Project:
         [] Website name
@@ -12,7 +10,7 @@ UPDATES:
         [] Deployment
         [] Banner
         [] User's Manual
-    Customer Side:
+    Customer Side:  
         [] Adoption Form
         [] Customer > About Page
         [] Other section in the page

@@ -9,7 +9,7 @@ use App\DogList;
 class customerAdoptController extends Controller
 {
     public function index(){
-        $dogList = DogList::paginate(3);
+        $dogList = DogList::paginate(20);
         return view('customerAdopt')->with('dogLists',$dogList);
     }
 

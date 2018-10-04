@@ -19,9 +19,9 @@
     
 <section class="section border-t">
     <div class="container">
-        <div class="row no-gutters">
+        <div class="row">
             @foreach($dogLists as $dogList)
-                <div class="col-md-4 mx-1 my-1 element-animate ">
+                <div class="col-sm-4 my-3 element-animate ">
                     <a href="/adopt/{{$dogList -> intDogID}}" class="link-thumbnail">
                         <h3>{{$dogList -> strSex}}, {{$dogList -> strAge}}</h3>
                         <span class=" icon">{{$dogList -> strDogName}}</span>
