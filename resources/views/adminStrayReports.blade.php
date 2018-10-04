@@ -147,6 +147,15 @@
                 </div>
                 <div class="row form-group">
                     <div class="col col-md-3">
+                        <label for="viewReporterEmail" class=" form-control-label">Email</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input type="text" id="viewReporterEmail" class="form-control" readonly>
+                    </div>
+                </div>
+                <hr>
+                <div class="row form-group">
+                    <div class="col col-md-3">
                         <label for="viewLocation" class=" form-control-label">Location of Stray Seen</label>
                     </div>
                     <div class="col-12 col-md-9">
@@ -181,6 +190,7 @@
         $(document).ready(function(){
            $(document).on('click','#btnViewReportModal',function(){
             $('#viewReporterName').val($(this).data('name'));
+            $('#viewReporterEmail').val($(this).data('email'));
             $('#viewReportedDate').val($(this).data('date'));
             $('#viewLocation').val($(this).data('address'));
             $('#viewStrayDescription').val($(this).data('dog'));

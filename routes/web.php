@@ -27,7 +27,6 @@
 	//Account
 		//Account Setting
 		Route::resource('/adminAccountSettings', 'adminAccountSettingsController');
-<<<<<<< HEAD
 
 //CUSTOMER SIDE
 	//Home
@@ -44,5 +43,3 @@
 
 	//About
 	Route::resource('/about','customerAboutController');
-=======
->>>>>>> 74b9d2d5c2cf89d3de85a276d20d8ea60cc8ea2b
