@@ -142,7 +142,7 @@
                     <p>Upload a single photo of the dog</p>
                     <input type="file" name="dogimage" id="gallery-photo-add" required="yes" accept="image/*">
                     <br><br>
-                    <div class="gallery"></div>
+                    <div id="previewImg" class="gallery"></div>
                     
                     <hr>
                 
@@ -200,7 +200,7 @@
                     <div class="card-footer">
                         <center>
                             <input type="submit" class="btn btn-primary btn-sm" value="Submit">
-                            <button type="reset" class="btn btn-danger btn-sm">
+                            <button type="reset" class="btn btn-danger btn-sm" onclick="resetImg()">
                               <i class="fa fa-ban"></i> Reset
                             </button>
                         </center>
@@ -446,32 +446,23 @@
         var imagesPreview = function(input, placeToInsertImagePreview) {
 
             if (input.files) {
-                var filesAmount = input.files.length;
+                var file = input.files[0];
                 var _validFileExtensions = ["jpeg","jpg","png"];    
-
-                if (input.files.length > 4) {
-                    alert("Maximum number of images that can be uploaded is 4");
-                    location.reload();
-                }
-                else{
-
-                     for (i = 0; i < filesAmount; i++) {
-                        var reader = new FileReader();
-
-                        reader.onload = function(event) {
+                
+                if(file.size < 10000000){
+                    var reader = new FileReader();
+                    reader.onload = function(event) {
                         $($.parseHTML('<img class="thumbnail">')).attr('src', event.target.result).appendTo(placeToInsertImagePreview)
-                        }
-
-                        reader.readAsDataURL(input.files[i]);
+                    }
+                    reader.readAsDataURL(file);
+                }else{
+                    alert('Image is too large')
                 }
-                }
-
-               
-            }
-
+            }               
         };
 
         $('#gallery-photo-add').on('change', function() {
+            resetImg();
             imagesPreview(this, 'div.gallery');
         });
     });
@@ -479,8 +470,8 @@
 
 {{-- Reset Insert Dog Form--}}
 <script>
-    function myFunction() {
-        document.getElementById("addDog").reset();
+    function resetImg() {
+        document.getElementById("previewImg").innerHTML = "";
     }
 </script>
 

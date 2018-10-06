@@ -54,7 +54,7 @@
                         <p>Upload a single photo of the dog</p>
                         <input type="file" name="petImg" id="gallery-photo-add" required="yes" accept="image/*">
                         <br><br>
-                        <div class="gallery"></div>
+                        <div id ="previewImg" class="gallery"></div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-12 form-group">
@@ -107,39 +107,34 @@
 
 <script src={{asset("customer/js/jquery-3.2.1.min.js")}}></script>
 <script>
-        $(function() {
-            // Multiple images preview in browser
-            var imagesPreview = function(input, placeToInsertImagePreview) {
-    
-                if (input.files) {
-                    var filesAmount = input.files.length;
-                    var _validFileExtensions = ["jpeg","jpg","png"];    
-    
-                    if (input.files.length > 4) {
-                        alert("Maximum number of images that can be uploaded is 4");
-                        location.reload();
-                    }
-                    else{
-    
-                         for (i = 0; i < filesAmount; i++) {
-                            var reader = new FileReader();
-    
-                            reader.onload = function(event) {
-                            $($.parseHTML('<img class="thumbnail">')).attr('src', event.target.result).appendTo(placeToInsertImagePreview)
-                            }
-    
-                            reader.readAsDataURL(input.files[i]);
-                    }
-                    }
-    
-                   
+    $(function() {
+        
+        var imagesPreview = function(input, placeToInsertImagePreview) {
+
+        if (input.files) {
+            var file = input.files[0];
+            var _validFileExtensions = ["jpeg","jpg","png"];    
+            
+            if(file.size < 10000000){
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    $($.parseHTML('<img class="thumbnail">')).attr('src', event.target.result).appendTo(placeToInsertImagePreview)
                 }
-    
-            };
-    
-            $('#gallery-photo-add').on('change', function() {
-                imagesPreview(this, 'div.gallery');
-            });
+                reader.readAsDataURL(file);
+            }else{
+                alert('Image is too large')
+            }
+        }               
+        };
+
+        $('#gallery-photo-add').on('change', function() {
+            resetImg();
+            imagesPreview(this, 'div.gallery');
         });
+    });
+
+    function resetImg() {
+        document.getElementById("previewImg").innerHTML = "";
+    }
 </script>
 @endsection

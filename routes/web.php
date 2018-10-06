@@ -47,6 +47,7 @@
 	//Adopt
 	Route::resource('/adopt','customerAdoptController');
 		Route::get('/adopt/{id}','customerAdoptController@show');
+		Route::post('/adopt/{id}/submit','customerAdoptController@submit');
 
 	//Missing
 	Route::resource('/missing','customerMissingController');
