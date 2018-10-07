@@ -1,7 +1,8 @@
 UPDATES:
 
-#Oct. 04, 2018 (10/04/18):
-    -  Updated Adoption UI
+#Oct. 07, 2018 (10/07/18):
+    - Adoption Form Completed
+    - Added Thank you page after adopting
     
 #Requirement/s:
     Project:
@@ -11,7 +12,6 @@ UPDATES:
         [] Banner
         [] User's Manual
     Customer Side:  
-        [] Adoption Form
         [] Customer > About Page
         [] Other section in the page
     Admin Side:
@@ -20,7 +20,6 @@ UPDATES:
 #Suggestion/:
     Admin Side:
         - Tooltip in every action button.
-        - Is dog size applicable in dog adoption form?
         - Menu Title
 
 

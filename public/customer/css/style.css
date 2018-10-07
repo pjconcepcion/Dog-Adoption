@@ -394,6 +394,20 @@ header {
   max-height: 100px;
 }
 
+.scroll-200{
+  word-wrap: break-word;
+  overflow-y: auto;
+  width:700px;
+  max-height: 200px;
+}
+
+.scroll-150{
+  word-wrap: break-word;
+  overflow-y: auto;
+  width:525px;
+  max-height: 150px;
+}
+
 .gallery{
   overflow: auto;
   text-align: center;
