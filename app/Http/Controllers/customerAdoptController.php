@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\DogList;
-use App\adoptionrequest;
+use App\AdoptionRequest;
 
 class customerAdoptController extends Controller
 {
@@ -35,7 +35,7 @@ class customerAdoptController extends Controller
         $reason = $request -> input('reason');
         $selectedPet = json_encode($petOwned);
 
-        $adoptRequest = new adoptionrequest;
+        $adoptRequest = new AdoptionRequest;
         $adoptRequest -> intDogID = $id;
         $adoptRequest -> strName = $name;
         $adoptRequest -> intAge = $age;
