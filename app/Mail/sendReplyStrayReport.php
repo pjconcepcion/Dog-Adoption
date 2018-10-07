@@ -29,7 +29,7 @@ class sendReplyStrayReport extends Mailable
     public function build()
     {
         $reporterEmail = session('sendEmail');
-
+        
         return $this->view('email.replyStrayReport')->to($reporterEmail);
     }
 }

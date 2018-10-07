@@ -9,7 +9,7 @@
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate">
                         <h1>We Love Pets</h1>   
-                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                        <p class="mb-5">Don't shop, adopt! Save a life, help us give a dog a forever home. Adopt now.</p>
                         <p><a href="/adopt" class="btn btn-white btn-outline-white">Adopt-a-Dog</a></p>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate">
                         <h1>Help us find them!</h1>
-                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                        <p class="mb-5">Help us locate those dogs in need of a home. If you have seen a stray, contact us here. We'll take action and make sure to give those dogs a shelter.</p>
                         <p><a href="/contact" class="btn btn-white btn-outline-white">Contact Us</a></p>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="row slider-text align-items-center justify-content-center">
                 <div class="col-md-8 text-center col-sm-12 element-animate">
                     <h1>Let us help!</h1>
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                    <p class="mb-5"></p>
                     <p><a href="/missing/file" class="btn btn-white btn-outline-white">File a missing report</a></p>
                 </div>
                 </div>
@@ -48,7 +48,7 @@
             <div class="row justify-content-center mb-5 element-animate">
                 <div class="col-md-8 text-center">
                 <h2 class=" heading mb-4">Adopt-a-Dog</h2>
-                <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                <p class="mb-5 lead">Our team believes that adopting is better than shopping for pets. </p>
                 </div>
             </div>
 
@@ -72,84 +72,33 @@
             </div>
         </div>
     </section>
-        <!-- END section -->
-    
+<!-- END section -->
 
-    <section class="section element-animate">
-        <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-4"></div>
-            <div class="col-md-8 section-heading">
-            <h2>It's a Dog Life</h2>
-            <p class="small-sub-heading">Curious story of Dogs</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-            <img src="customer/img/dog_1.jpg" alt="Image placeholder" class="img-fluid">
-            </div>
-            <div class="col-md-4">
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-            </div>
-            <div class="col-md-4">
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p><a href="#">Learn More <span class="ion-ios-arrow-right"></span></a></p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section class="section blog">
-        <div class="container">
-
+<section class="section border-t" style="background-color:rgb(235, 235, 235)">
+    <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
             <div class="col-md-8 text-center">
-            <h2 class=" heading mb-4">Recent Blog Post</h2>
-            <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+            <h2 class=" heading mb-4">Have you seen this dogs?</h2>
+            <p class="mb-5 lead">It is an unfortunate thing to lose a pet.</p>
             </div>
         </div>
+        <div class="col-md-8 text-center col-sm-12 element-animate mx-auto">
+            <p><a href="/adopt" class="btn btn-block btn-outline-black">View Missing Dogs</a></p>
+        </div>
+    </div>
+</section>
 
-        <div class="row">
-            <div class="col-md-6">
-
-            <div class="media mb-4 d-md-flex d-block element-animate">
-                <a href="#" class="mr-5"><img src="customer/img/blog_1.jpg" alt="Placeholder image" class="img-fluid"></a>
-                <div class="media-body">
-                <span class="post-meta">Feb 26th, 2018</span>
-                <h3 class="mt-2 text-black"><a href="#">How to Train Your Dog</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus ipsa earum nemo consectetur cupiditate necessitatibus suscipit assumenda perspiciatis provident.</p>
-                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
-                </div>
-            </div>
-
-
-
-            </div>
-            <div class="col-md-6">
-            <div class="media mb-4 d-md-flex d-block element-animate">
-                <a href="#" class="mr-5"><img src="customer/img/blog_2.jpg" alt="Placeholder image" class="img-fluid"></a>
-                <div class="media-body">
-                <span class="post-meta">Feb 26th, 2018</span>
-                <h3 class="mt-2 text-black"><a href="#">Find The Right Food For Your Dogs</a></h3>
-                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
-                </div>
-            </div>
-
-            <div class="media mb-4 d-md-flex d-block element-animate">
-                <a href="#" class="mr-5"><img src="customer/img/blog_3.jpg" alt="Placeholder image" class="img-fluid"></a>
-                <div class="media-body">
-                <span class="post-meta">Feb 26th, 2018</span>
-                <h3 class="mt-2 text-black"><a href="#">Dog's Affections To Owner</a></h3>
-                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
-                </div>
-            </div>
-
+<section class="section border-t" >
+    <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-8 text-center">
+            <h2 class=" heading mb-4">Help us find them</h2>
+            <p class="mb-5 lead">It is an unfortunate thing to lose a pet.</p>
             </div>
         </div>
+        <div class="col-md-8 text-center col-sm-12 element-animate mx-auto">
+            <p><a href="/adopt" class="btn btn-block btn-outline-black">Contact Us</a></p>
         </div>
-    </section>
-
+    </div>
+</section>
 @endsection

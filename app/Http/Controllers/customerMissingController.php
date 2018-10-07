@@ -9,7 +9,7 @@ use App\MissingReports;
 class customerMissingController extends Controller
 {
     public function index(){
-        $missingDog = MissingReports::where('bitIsApproved','=',0)->paginate(5);
+        $missingDog = MissingReports::where('bitIsApproved','=',1)->paginate(5);
 
         return view('customerMissing')->with('missingDogs',$missingDog);
     }
