@@ -12,7 +12,7 @@ class adminStrayReportsController extends Controller
 {
     public function index(){
 
-        $strayReport = StrayReports::All()->sortBy('dtReportDate');
+        $strayReport = StrayReports::All()->sortByDesc('dtReportDate');
 
     	return view('adminStrayReports')->with('strayReports', $strayReport);	
     }
@@ -44,7 +44,6 @@ class adminStrayReportsController extends Controller
         session(['sendName' => $request -> input('sendName')]);
         session(['sendEmail' => $request -> input('sendEmail')]);
         session(['sendLocation' => $request -> input('sendLocation')]);
-        session(['sendDate' => $request -> input('sendDate')]);
         
         DB::table('strayreportstbl')
 			->where('intStrayReportID', $reportID)

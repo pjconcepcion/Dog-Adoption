@@ -39,7 +39,7 @@
                             </div> 
                             <div class = "col-3">
                                 <label> Age: </label>
-                                <input type = "text" class = "form-control" required name="age" pattern="[0-9]{2}" title="Invalid age"/>
+                                <input type = "number" class = "form-control" required name="age" pattern="[0-9]{2}" title="Invalid age"/>
                             </div>
                         </div>
                         <div class = "row py-2">
@@ -85,14 +85,14 @@
                         <div class = "row py-2">
                             <div class = "col-3">
                                 <label> No. of children: </label>
-                                <input type = "text" class = "form-control" required name="noChildren" pattern="[0-9]{1,2}" title="I think it's impossible to have a hundred children."/>
+                                <input type = "number" class = "form-control" required name="noChildren" pattern="[0-9]{1,2}" title="I think it's impossible to have a hundred children."/>
                             </div>
                             <div class = "col-3">
                                 <label> No. of Adults: </label>
-                                <input type = "text" class = "form-control" required name="noAdults" pattern="[0-9]{1,2}" title="Is it possible that there are a hundred of adults in there?"/>
+                                <input type = "number" class = "form-control" required name="noAdults" pattern="[0-9]{1,2}" title="Is it possible that there are a hundred of adults in there?"/>
                             </div>
                             <div class = "col-5">
-                                <label> Is someone allergic to dog? </label>
+                                <label> Is someone in your household allergic to dog? </label>
                                 <div class="py-2 px-2 row">
                                     <div class = "px-2">
                                         <input type="radio" id="radioIsAllergicYes" value = "1" name = "isAllergic" required/>
@@ -148,10 +148,6 @@
                                     <div class = "row no-gutters px-2">
                                         <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Lizard" name = "petOwned[]"/>
                                         <label class="px-2" for="chkBoxDog"> Lizard </label>
-                                    </div>
-                                    <div class = "row no-gutters px-2">
-                                        <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Tiger/Lion" name = "petOwned[]"/>
-                                        <label class="px-2" for="chkBoxDog"> Tiger/Lion </label>
                                     </div>
                                     <div class = "row no-gutters px-2">
                                         <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Rabbit" name = "petOwned[]"/>

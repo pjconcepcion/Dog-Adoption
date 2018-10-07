@@ -56,10 +56,35 @@
             </div>
         </div>
     </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Adoption Request</strong>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Reported by</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($adoptionRequests as $adoptionRequest)
+    
+                        @endforeach
+                    </tbody>
+                </table>
+    
+            </div>
+        </div>
+    </div>
+
 </div> <!-- .content -->
 <!-- /#right-panel -->
 
 <!-- Right Panel -->
+
 
 
 

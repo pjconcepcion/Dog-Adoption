@@ -46,9 +46,9 @@ class adminMissingReportsController extends Controller
         session(['mrEmail' => $request -> input('email')]);
         session(['mrDogname' => $request -> input('dogname')]);
         
-        DB::table('strayreportstbl')
-			->where('intStrayReportID', $reportID)
-			->update(['bitResponded' => 1]);
+        DB::table('missingreportstbl')
+			->where('intMissingReportID', $reportID)
+			->update(['bitIsApproved' => 1]);
 		
         $this -> missingReportEmail();
 

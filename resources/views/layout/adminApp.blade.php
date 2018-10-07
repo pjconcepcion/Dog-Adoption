@@ -64,7 +64,7 @@
 	    <li>
 	        <a href="/adminDashboard"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
 	    </li>
-	    <h3 class="menu-title">Maintenance</h3><!-- /.menu-title -->
+	    <h3 class="menu-title">Dog Adoption</h3><!-- /.menu-title -->
 	    <li class="menu-item-has-children dropdown">
 	        <li>
 	            <a href="/adminDogs"> <i class="menu-icon fa fa-paw"></i>Dogs for Adoption</a>
@@ -72,18 +72,18 @@
 	        <li>
 	            <a href="/adminAdoptionRequest"> <i class="menu-icon fa fa-file-text"></i>Adoption Request </a>
 	        </li>
-	        <li>
-	            <a href="/adminMissingReports"> <i class="menu-icon fa fa-exclamation-circle"></i>Missing Reports </a>
-	        </li>
 	    </li>
 
 
 	    <h3 class="menu-title">Messages</h3><!-- /.menu-title -->
+		<li>
+			<a href="/adminMissingReports"> <i class="menu-icon fa fa-exclamation-circle"></i>Missing Reports </a>
+		</li>
 
 	    <li>
 	        <a href="/adminStrayReports"> <i class="menu-icon fa fa-envelope"></i>Stray Reports</a>
 	    </li>
-
+		
 	    <h3 class="menu-title">Account</h3><!-- /.menu-title -->
 
 	    <li>

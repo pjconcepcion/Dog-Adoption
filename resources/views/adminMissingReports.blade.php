@@ -105,7 +105,7 @@
                                             data-dogname="{{$missingReport -> strDogName}}"
                                         ><i class="fa fa-check-circle-o"></i> </button> 
                                     @else
-                                        <button disabled type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-check-circle-o"></i> </button>
+                                        <button disabled type="submit" class="btn btn-sm btn-success"><i class="fa fa-check-circle-o"></i> </button>
                                     @endif
                                     
                                     <button type="submit" class="btn btn-sm btn-outline-danger" data-toggle="modal" id="btnDeleteMissingReport" data-id="{{$missingReport -> intMissingReportID}}"><i class="fa fa-trash"></i> </button>
