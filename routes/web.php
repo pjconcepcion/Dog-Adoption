@@ -2,6 +2,7 @@
 //ADMIN SIDE
 	// Login
 	Route::resource('/admin','adminLoginController');
+		Route::post('/admin/login','adminLoginController@login');	
 	
 	// Dashboard
 	Route::resource('/adminDashboard', 'adminDashboardController');

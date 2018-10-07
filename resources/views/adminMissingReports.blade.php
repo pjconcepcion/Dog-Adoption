@@ -83,7 +83,7 @@
                                 <td>{{$missingReport -> strDogName}}</td> 
                                 <td>{{$missingReport -> dtFiledMissing}}</td>
                                 <td>
-                                    <button type="submit" class="btn btn-sm btn-outline-primary"
+                                    <button class="btn btn-sm btn-outline-primary"
                                             data-toggle="modal" id="btnViewMissingReport"
                                             data-id="{{$missingReport -> intMissingReportID}}"
                                             data-name="{{$missingReport -> strReporterName}}"
@@ -263,7 +263,7 @@
         
 {{-- END --}}
 
-{{-- DELETE Report --}}
+{{-- approve Report --}}
 <div id="approveMissingReport" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
