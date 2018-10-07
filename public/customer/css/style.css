@@ -401,6 +401,11 @@ header {
   max-height: 200px;
 }
 
+.scroll-x{
+  word-wrap: break-word;
+  overflow-y: auto;
+  max-height: 200px;
+}
 .scroll-150{
   word-wrap: break-word;
   overflow-y: auto;

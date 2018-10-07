@@ -3,8 +3,18 @@
 @section('content')
 
     <section class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url('image/banner.png');">
+            <div class="container">
+                {{-- <div class="row slider-text align-items-center justify-content-center">
+                    <div class="col-md-8 text-center col-sm-12 element-animate">
+                        <h1>We Love Pets</h1>   
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                        <p><a href="/adopt" class="btn btn-white btn-outline-white">Adopt-a-Dog</a></p>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
         <div class="slider-item" style="background-image: url('customer/img/slider-1.jpg');">
-        
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate">
@@ -14,9 +24,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
         <div class="slider-item" style="background-image: url('customer/img/slider-2.jpg');">
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
@@ -28,7 +36,6 @@
                 </div>
             </div>
         </div>
-
         <div class="slider-item" style="background-image: url('customer/img/slider-3.jpg');">
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
@@ -40,7 +47,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     <!-- END slider -->
     <section class="section border-t">
