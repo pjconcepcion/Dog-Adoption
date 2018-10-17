@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Dog Adoption</title>
+        <title>FURRYTAILS</title>
+        <link rel="icon" href={{asset("image/paw.ico")}}>
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{csrf_token()}}">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

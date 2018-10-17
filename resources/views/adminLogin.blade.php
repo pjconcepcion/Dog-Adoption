@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Dog Adoption Login</title>
+	<title>FURRYTAILS</title>
+	<link rel="icon" href={{asset("image/paw.ico")}}>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
@@ -22,7 +23,7 @@
 			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
 				<form class="login100-form validate-form flex-sb flex-w">
 					<span class="login100-form-title p-b-32">
-						Account Login
+						<center>Account Login</center>
 					</span>
 
 					<span class="txt1 p-b-11">
@@ -47,9 +48,6 @@
 					<div class="flex-sb-m w-full p-b-48">
 						<div class="contact100-form-checkbox">
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
 						</div>
 
 						<div>
