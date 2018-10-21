@@ -17,8 +17,14 @@
         <div id='this'> 
             <center><h1 style="font-family: century gothic"><i class="fa fa-paw"></i> Furrytails <i class="fa fa-paw"></i></h1></center>
             <br><br><br>
-            <p>We our sorry to hear about your missing pet, {{session('mrDogname')}}, our team will post the details about your missing pet and your contact information on our website to help spread the word. It will be posted for 3 months.</p>
-            <p>Please do contact us if you've found your pet. We hope that we will be of help to find your missing pet.</p>
+            <p>We are pleased to inform you that your application has been approved. You can visit us and pass the additional requiremets for the adoption of your chosen pet. </p>
+            <p>The follow-up requirements include:</p>
+            <ul>
+                <li>Copy of your Birth Certificate</li>
+                <li>Baranggay Certificate</li>
+                <li>A valid ID</li>
+            </ul>
+            <p>Hope to see you soon.</p>
         </div>
     </div>
 </body>

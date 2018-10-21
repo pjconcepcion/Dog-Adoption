@@ -71,6 +71,9 @@
 	        </li>
 	        <li>
 	            <a href="/adminAdoptionRequest"> <i class="menu-icon fa fa-file-text"></i>Adoption Request </a>
+			</li>
+			<li>
+	            <a href="/adminApprovedApplication"> <i class="menu-icon fa fa-file-o"></i>Approved Application </a>
 	        </li>
 	    </li>
 

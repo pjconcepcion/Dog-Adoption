@@ -16,6 +16,15 @@
 
 		//Adoption Request
 		Route::resource('/adminAdoptionRequest', 'adminAdoptionRequestController');
+		Route::post('/adminSearchedAdoptionRequest', 'adminApprovedApplicationController@search');
+		Route::post('/adminAdoptionRequest/deleteApplication', 'adminAdoptionRequestController@deleteApplication');
+		Route::post('/adminAdoptionRequest/approveApplication', 'adminAdoptionRequestController@approveApplication');
+
+		//Approved Application
+		Route::resource('/adminApprovedApplication', 'adminApprovedApplicationController');
+		Route::post('/adminSearchedApprovedApplication', 'adminApprovedApplicationController@search');
+		Route::post('/adminApprovedApplication/approve', 'adminApprovedApplicationController@approve');
+		Route::post('/adminApprovedApplication/disapprove', 'adminApprovedApplicationController@disapprove');
 
 		//Missing Reports
 		Route::resource('/adminMissingReports', 'adminMissingReportsController');

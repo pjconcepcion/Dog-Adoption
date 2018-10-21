@@ -52,7 +52,7 @@
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
                         <li>Maintenance</li>
-                        <li class="active">Adoption Request</li>
+                        <li class="active">Approved Adoption Application</li>
                     </ol>
                 </div>
             </div>
@@ -62,7 +62,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Adoption Request</strong>
+                <strong class="card-title">Approved Adoption Application</strong>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -75,42 +75,38 @@
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach($adoptionRequests as $adoptionRequest)
+                        @foreach($approvedApplications as $approvedApplication)
                         <tr>
-                            <td>{{$adoptionRequest -> strName}}</td>
-                            <td>{{$adoptionRequest -> strEmail}}</td>
-                            <td>{{$adoptionRequest -> strContact}}</td>
+                            <td>{{$approvedApplication -> strName}}</td>
+                            <td>{{$approvedApplication -> strEmail}}</td>
+                            <td>{{$approvedApplication -> strContact}}</td>
                             <td>
                                 <button title="View" type="submit" class="btn btn-sm btn-outline-primary"
                                     data-toggle="modal" id="btnViewApplication"
-                                    data-name="{{$adoptionRequest -> strName}}"
-                                    data-dogname="{{$adoptionRequest -> strDogName}}"
-                                    data-age="{{$adoptionRequest -> intAge}}"
-                                    data-address="{{$adoptionRequest -> strAddress}}"
-                                    data-contact="{{$adoptionRequest -> strContact}}"
-                                    data-email="{{$adoptionRequest -> strEmail}}"
-                                    data-nochildren="{{$adoptionRequest -> intNoChildren}}"
-                                    data-noadult="{{$adoptionRequest -> intNoAdults}}"
-                                    data-allergic={{$adoptionRequest -> bitAllergic == 1 ? "Yes": "No"}}
-                                    data-hadpet={{$adoptionRequest -> bitHadPet == 1 ? "Yes": "No"}}
-                                    data-nopets="{{$adoptionRequest -> intNoPets}}"
-                                    data-selectedpets="{{$adoptionRequest -> strSelectedPets}}"
-                                    @if($adoptionRequest -> intPetSkills == 1)
+                                    data-name="{{$approvedApplication -> strName}}"
+                                    data-dogname="{{$approvedApplication -> strDogName}}"
+                                    data-age="{{$approvedApplication -> intAge}}"
+                                    data-address="{{$approvedApplication -> strAddress}}"
+                                    data-contact="{{$approvedApplication -> strContact}}"
+                                    data-email="{{$approvedApplication -> strEmail}}"
+                                    data-nochildren="{{$approvedApplication -> intNoChildren}}"
+                                    data-noadult="{{$approvedApplication -> intNoAdults}}"
+                                    data-allergic={{$approvedApplication -> bitAllergic == 1 ? "Yes": "No"}}
+                                    data-hadpet={{$approvedApplication -> bitHadPet == 1 ? "Yes": "No"}}
+                                    data-nopets="{{$approvedApplication -> intNoPets}}"
+                                    data-selectedpets="{{$approvedApplication -> strSelectedPets}}"
+                                    @if($approvedApplication -> intPetSkills == 1)
                                         data-petskills="Beginner"
-                                    @elseif($adoptionRequest -> intPetSkills == 2)
+                                    @elseif($approvedApplication -> intPetSkills == 2)
                                         data-petskills="Intermediate"
-                                    @elseif($adoptionRequest -> intPetSkills == 3)
+                                    @elseif($approvedApplication -> intPetSkills == 3)
                                         data-petskills="Expert"
                                     @endif
-                                    data-reason="{{$adoptionRequest -> strReason}}"
+                                    data-reason="{{$approvedApplication -> strReason}}"
                                     ><i class="fa fa-eye"></i>
-                                </button>  
-                                @if( $adoptionRequest -> bitApproved == 0)
-                                    <button data-toggle="modal" id="btnApproveApplication" data-id="{{$adoptionRequest -> intRequestID}}" data-email="{{$adoptionRequest -> strEmail}}" title="Approve" type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-check-circle"></i> </button>  
-                                @else
-                                    <button disabled title="Approved" type="submit" class="btn btn-sm btn-success"><i class="fa fa-check-circle"></i> </button>  
-                                @endif
-                                <button data-toggle="modal" id="btnDeleteApplication" data-id="{{$adoptionRequest -> intRequestID}}" title="Delete" type="submit" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i> </button>  
+                                </button>                                 
+                                <button data-toggle="modal" id="btnApproveApplication" data-id="{{$approvedApplication -> intRequestID}}" data-dogid="{{$approvedApplication -> intDogID}}" data-email="{{$approvedApplication -> strEmail}}" title="Completed" type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-check-circle"></i> </button>  
+                                <button data-toggle="modal" id="btnDeleteApplication" data-id="{{$approvedApplication -> intRequestID}}" title="Incomplete" type="submit" class="btn btn-sm btn-outline-danger"><i class="fa fa-times-circle"></i> </button>  
                             </td>
                         </tr>
                         @endforeach
@@ -119,13 +115,12 @@
     
             </div>
         </div>
-    </div>
+    </div>`
 
 </div> <!-- .content -->
 <!-- /#right-panel -->
 
 <!-- Right Panel -->
-
 
 {{-- View Application --}}
 <div id="viewApplication" class="modal fade" role="dialog">
@@ -305,7 +300,7 @@
 </script>
         
 {{-- END --}}
-    
+
 {{-- Approve Application --}}
 <div id="approveApplication" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -313,17 +308,18 @@
         <div class="modal-content">
 
         <div class="modal-header">
-            <h4 class="modal-title"></b><i class="fa fa-chsck-o"></i> Approve Application</h4>
+            <h4 class="modal-title"></b><i class="fa fa-cross-o"></i> Complete Application</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>  
         </div>
 
         <div class="modal-body">
-            <p> Do you wish to approve this application?</p>
+            <p> Do you wish to finalize and approve this application?</p>
         </div>
         <div class="modal-footer">
-            <form enctype="multipart/form-data" action="/adminAdoptionRequest/approveApplication" method="post">
+            <form enctype="multipart/form-data" action="/adminApprovedApplication/approve" method="post">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <input type="hidden" id="approveApplicationID" name="applicationID">
+                <input type="hidden" id="dogID" name="dogID">
                 <input type="hidden" id="approveEmail" name="email">
                 <input type="submit" class="btn btn-danger" value="Yes">
             </form>                
@@ -337,6 +333,7 @@
     $(document).ready(function(){
         $(document).on('click','#btnApproveApplication',function(){
         $('#approveApplicationID').val($(this).data('id'));
+        $('#dogID').val($(this).data('dogid'));
         $('#approveEmail').val($(this).data('email'));
 
         $('#approveApplication').modal('show');
@@ -351,7 +348,7 @@
         <div class="modal-content">
 
         <div class="modal-header">
-            <h4 class="modal-title"></b><i class="fa fa-trash"></i> Confirm Delete</h4>
+            <h4 class="modal-title"></b><i class="fa fa-times-circle-o"></i> Dissaprove Application</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>  
         </div>
 
@@ -359,7 +356,7 @@
             <p> Do you really want to delete this application?</p>
         </div>
         <div class="modal-footer">
-            <form enctype="multipart/form-data" action="/adminAdoptionRequest/deleteApplication" method="post">
+            <form enctype="multipart/form-data" action="/adminApprovedApplication/disapprove" method="post">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <input type="hidden" id="deleteApplicationID" name="applicationID">
                 <input type="submit" class="btn btn-danger" value="Yes">
