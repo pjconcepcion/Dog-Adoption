@@ -93,7 +93,7 @@
 	        <a href="/adminAccountSettings"> <i class="menu-icon fa fa-gear"></i>Account Settings </a>
 	    </li>
 	    <li>
-	        <a href=""> <i class="menu-icon fa fa-sign-out"></i>Logout </a>
+	        <a href="/admin"> <i class="menu-icon fa fa-sign-out"></i>Logout </a>
 	    </li>
 
 	</ul>

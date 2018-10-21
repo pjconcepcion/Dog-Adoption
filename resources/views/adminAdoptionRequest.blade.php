@@ -52,7 +52,7 @@
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
                         <li>Maintenance</li>
-                        <li class="active">Adoption Request</li>
+                        <li class="active">Adoption Application</li>
                     </ol>
                 </div>
             </div>
@@ -62,7 +62,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Adoption Request</strong>
+                <strong class="card-title">Adoption Application</strong>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -123,9 +123,173 @@
 
 </div> <!-- .content -->
 <!-- /#right-panel -->
-
 <!-- Right Panel -->
 
+{{-- View Adoption Request --}}
+<div id="viewAdoptionRequest" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+        <div class="modal-header">
+            <h4 class="modal-title"></b><i class="fa fa-file"></i>&nbsp View Application</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>  
+        </div>
+
+        <div class="modal-body">
+
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="date" class=" form-control-label">Date Applied</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="date" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="dogname" class=" form-control-label">Desired Dog</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="dogname" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <br>
+                    <center><h5>Personal Information</h5></center>
+                </div>
+            </div>
+            
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="name" class=" form-control-label">Applicant's Name</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="name" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="age" class=" form-control-label">Age</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="age" class="form-control" readonly>
+                </div>
+            </div>
+            
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="address" class=" form-control-label"> Address</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="address" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="contact" class=" form-control-label">Contact No.</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="contact" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="email" class=" form-control-label">Email</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" id="email" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <br>
+                    <center><h5>Family and Housing Information</h5></center>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="childno" class=" form-control-label">No. of Children</label>
+                </div>
+                <div class="col-12 col-md-3">
+                    <input type="text" id="childno" class="form-control" readonly>
+                </div>
+                <div class="col col-md-3">
+                    <label for="adultno" class=" form-control-label">No. of Adults</label>
+                </div>
+                <div class="col-12 col-md-3">
+                    <input type="text" id="adultno" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-6">
+                    <label for="isallergic" class=" form-control-label">Are there anyone in your hosehold allergic to dogs?</label>
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" id="isallergic" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-6">
+                    <label for="hadpet" class=" form-control-label">Have you had other pets before?</label>
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" id="hadpet" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="petno" class=" form-control-label">Number of pets in your current household</label>
+                    </div>
+                    <div class="col-12 col-md-1">
+                        <input type="text" id="petno" class="form-control" readonly>
+                    </div>
+                    <div class="col col-md-3">
+                        <label for="selectedpets" class=" form-control-label">Which pet/s have you already owned?</label>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <input type="text" id="selectedpets" class="form-control" readonly>
+                    </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-6">
+                    <label for="petskill" class=" form-control-label">Rate of the level of dog owning experience</label>
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" id="petskill" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <br>
+                    <center><h5>Reason for Applying</h5></center>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-12 col-md-12">
+                    <textarea rows="8" id="reason" class="form-control" readonly></textarea>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
 
 {{-- View Application --}}
 <div id="viewApplication" class="modal fade" role="dialog">
@@ -382,6 +546,30 @@
         
 {{-- END --}}
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).on('click','#btnViewAdoptionRequest',function(){
+        $('#name').val($(this).data('name'));
+        $('#dogname').val($(this).data('dogname'));
+        $('#age').val($(this).data('age'));
+        $('#email').val($(this).data('email'));
+        $('#address').val($(this).data('address'));
+        $('#contact').val($(this).data('contact'));
+        $('#childno').val($(this).data('childno'));
+        $('#adultno').val($(this).data('adultno'));
+        $('#isallergic').val($(this).data('isallergic'));
+        $('#hadpet').val($(this).data('hadpet'));
+        $('#petno').val($(this).data('petno'));
+        $('#selectedpets').val($(this).data('selectedpets'));
+        $('#petskill').val($(this).data('petskill'));
+        $('#reason').val($(this).data('reason'));
+        $('#date').val($(this).data('date'));
 
+        $('#viewAdoptionRequest').modal('show');
+        });
+    });
+</script>
+        
+{{-- END --}}
 
 @endsection

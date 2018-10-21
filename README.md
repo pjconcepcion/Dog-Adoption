@@ -1,8 +1,8 @@
 UPDATES:
 
-#Oct. 07, 2018 (10/07/18):
-    - Adoption Form Completed
-    - Added Thank you page after adopting
+#Oct. 08, 2018 (10/08/18):
+    - Login is functional
+    - Can view adoption request
     
 #Requirement/s:
     Project:
@@ -15,7 +15,7 @@ UPDATES:
         [] Customer > About Page
         [] Other section in the page
     Admin Side:
-        [] Login
+        [X] Login
 
 #Suggestion/:
     Admin Side:
