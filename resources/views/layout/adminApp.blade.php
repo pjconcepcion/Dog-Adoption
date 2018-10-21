@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	{{-- TITLE AND ICON --}}
-	<title>Dog Adoption Admin</title>
+	<title>Furrytails Admin</title>
 	<link rel="icon" href={{asset("image/paw.ico")}}>
 	{{-- END --}}
 <meta name="description" content="Sufee Admin - HTML5 Admin Template">
