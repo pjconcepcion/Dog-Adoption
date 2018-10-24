@@ -77,15 +77,36 @@ class adminDashboardController extends Controller
         $p = "  <!DOCTYPE html>
                 <html>
                     <head>
+                        <link rel='icon' href='../public/image/paw.ico'>
+                        <link rel='stylesheet' href='../public/customer/css/bootstrap.css'>
                         <title>Dog Adoption Report</title>
                         <style>
-                
-                                #this{
-                                    font-family: 'century gothic';
+                                #this h3{
+                                        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
                                 }
                                 #this h2{
-                                    text-align: center;
+                                        text-align: center;
                                 }
+                                #table th{
+                                        text-align: center;
+                                }
+                                #table{
+                                        margin: auto;
+                                        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+                                        border-collapse: collapse;
+                                        width: 100%;
+                                }
+                                #table td{
+                                        padding-left: 6;
+                                        padding-right: 6;
+                                }
+                                #table #name{
+                                        width: 20%;
+                                }
+                                #table #email{
+                                        width: 20%;
+                                }
+                                
                         </style>
                     </head>
                     <body>
@@ -98,12 +119,12 @@ class adminDashboardController extends Controller
                             </div>
                         </div>
                         <div>
-                        <table>
+                        <table class='table'>
                             <thead>
                                 <tr>
-                                    <th>Name</th>
+                                    <th id='name'>Name</th>
                                     <th>Contact</th>
-                                    <th>Email</th>
+                                    <th id='email'>Email</th>
                                     <th>Dog Adopted</th>
                                     <th>Adoption Date</th>
                                 </tr>
@@ -113,17 +134,22 @@ class adminDashboardController extends Controller
         $add = "";
 
         foreach($dogAdoption as $dList){
-            $add .= "<tr>
-                        <td>".$dList-> strName." </td>
-                        <td>".$dList-> strContact." </td>
-                        <td>".$dList-> strEmail." </td>
-                        <td>".$dList-> strDogName." </td>
-                        <td>".$dList-> dtAdoptionDate." </td>
-                    </tr>";
+                if($dList){
+                        $add .= "<tr>
+                                <td>".$dList-> strName." </td>
+                                <td>".$dList-> strContact." </td>
+                                <td>".$dList-> strEmail." </td>
+                                <td>".$dList-> strDogName." </td>
+                                <td>".$dList-> dtAdoptionDate." </td>
+                        </tr>";
+                }else{
+                        $add .= "<tr>
+                                <td colspan = 6> No record found </td>
+                        </tr>";  
+                }
         }
 
         $p .= $add;
-
         $p.= "
                             </tbody>
                         /table>
@@ -193,14 +219,28 @@ class adminDashboardController extends Controller
         $p = "  <!DOCTYPE html>
                 <html>
                     <head>
+                        <link rel='icon' href=''../public/image/paw.ico'>
+                        <link rel='stylesheet' href='../public/customer/css/bootstrap.css'>
                         <title>Stray Dogs Report</title>
                         <style>
-                
-                                #this{
-                                    font-family: 'century gothic';
+                                #this h3{
+                                        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
                                 }
                                 #this h2{
                                     text-align: center;
+                                }
+                                #table th{
+                                        text-align: center;
+                                }
+                                #table{
+                                        margin: auto;
+                                        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+                                        border-collapse: collapse;
+                                        width: 100%;
+                                }
+                                #table td{
+                                        padding-left: 6;
+                                        padding-right: 6;
                                 }
                         </style>
                     </head>
@@ -214,7 +254,7 @@ class adminDashboardController extends Controller
                             </div>
                         </div>
                         <div>
-                        <table>
+                        <table class='table'>
                             <thead>
                                 <tr>
                                     <th>Reporter Name</th>
@@ -309,14 +349,31 @@ class adminDashboardController extends Controller
         $p = "  <!DOCTYPE html>
                 <html>
                     <head>
+                        <link rel='icon' href=''../public/image/paw.ico'>
+                        <link rel='stylesheet' href='../public/customer/css/bootstrap.css'>
                         <title>Missing Pets Report</title>
                         <style>
-                
-                                #this{
-                                    font-family: 'century gothic';
+                                #this h3{
+                                        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
                                 }
                                 #this h2{
                                     text-align: center;
+                                }
+                                #table th{
+                                        text-align: center;
+                                }
+                                #table{
+                                        margin: auto;
+                                        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+                                        border-collapse: collapse;
+                                        width: 100%;
+                                }
+                                #table td{
+                                        padding-left: 6;
+                                        padding-right: 6;
+                                }
+                                #table #reporter{
+                                        width: 20%;
                                 }
                         </style>
                     </head>
@@ -330,10 +387,10 @@ class adminDashboardController extends Controller
                             </div>
                         </div>
                         <div>
-                        <table>
+                        <table class='table'>
                             <thead>
                                 <tr>
-                                    <th>Reporter Name</th>
+                                    <th id='reporter'>Reporter Name</th>
                                     <th>Reporter Email</th>
                                     <th>Reporter Contact</th>
                                     <th>Missing Dog Name</th>

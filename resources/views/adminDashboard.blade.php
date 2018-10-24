@@ -102,7 +102,7 @@
                     </div>
                     
                     <div class="h6 text-center mb-4">
-                        <form enctype="multipart/form-data" action="/adminDashboard/printDogAdoptionReport" method="post">                        
+                        <form enctype="multipart/form-data" action="/adminDashboard/printDogAdoptionReport" target="_blank" method="post">                        
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="row">
                                 <div class="col-md-5">
@@ -161,7 +161,7 @@
                     </div>
                     
                     <div class="h6 text-center mb-4">
-                        <form enctype="multipart/form-data" action="/adminDashboard/printStrayReport" method="post">                        
+                        <form enctype="multipart/form-data" action="/adminDashboard/printStrayReport" target="_blank" method="post">                        
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="row">
                                 <div class="col-md-5">
@@ -222,7 +222,7 @@
                     </div>
                     
                     <div class="h6 text-center mb-4">
-                        <form enctype="multipart/form-data" action="/adminDashboard/printMissingReport" method="post">                        
+                        <form enctype="multipart/form-data" action="/adminDashboard/printMissingReport" target="_blank" method="post">                        
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="row">
                                 <div class="col-md-5">

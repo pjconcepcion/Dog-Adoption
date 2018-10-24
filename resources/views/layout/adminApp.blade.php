@@ -59,8 +59,8 @@
 	</button>
 	{{-- <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
 	<a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> --}}
-	<a class="navbar-brand" href="/adminDashboard"><img src="image/smBanner.png" alt="Furrytails"></a>
-	<a class="navbar-brand hidden" href="/adminDashboard"><img src="image/smLogo.png" alt="FT"></a>
+	<a class="navbar-brand" href="/adminDashboard"><img src="image/whiteBanner.png" alt="Furrytails"></a>
+	<a class="navbar-brand hidden" href="/adminDashboard"><img src="image/whiteIcon.png" alt="FT"></a>
 	</div>
 
 	<div id="main-menu" class="main-menu collapse navbar-collapse">
