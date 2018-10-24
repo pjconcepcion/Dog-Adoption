@@ -8,8 +8,11 @@ use Dompdf\Dompdf;
 class adminDashboardController extends Controller
 {
     
-    public function index(){
-
+    public function index(Request $request){
+        if(!($request -> session() -> exists('login'))){
+                return redirect('/admin');
+        }
+        
         $dogC = DB::table('doglisttbl')
                     ->select(DB::raw("COUNt('intDogID') AS CntDog"))
                     ->where('bitIsAdopted', '=', 1)
@@ -27,7 +30,7 @@ class adminDashboardController extends Controller
 
         $counters = array('dogCount' => $dogC -> CntDog, 'strayCount' => $strayC -> CntStray, 'missingCount'=> $missingC -> CntMissing);
         $year = range (date('Y'), 2005);
-
+        
     	return view('adminDashboard')->with($counters)->with('years', $year);
     }
 
@@ -165,7 +168,7 @@ class adminDashboardController extends Controller
 
         $dompdf->loadHtml($p);
 
-        $dompdf ->  setPaper('letter', 'portrait');
+        $dompdf ->  setPaper('letter', 'landscape');
 
         $dompdf->render();
 
@@ -295,7 +298,7 @@ class adminDashboardController extends Controller
 
         $dompdf->loadHtml($p);
 
-        $dompdf ->  setPaper('letter', 'portrait');
+        $dompdf ->  setPaper('letter', 'landscape');
 
         $dompdf->render();
 
@@ -430,7 +433,7 @@ class adminDashboardController extends Controller
 
         $dompdf->loadHtml($p);
 
-        $dompdf ->  setPaper('letter', 'portrait');
+        $dompdf ->  setPaper('letter', 'landscape');
 
         $dompdf->render();
 

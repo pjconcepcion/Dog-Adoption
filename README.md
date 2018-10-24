@@ -1,7 +1,10 @@
 UPDATES:
 
-#Oct. 08, 2018 (10/08/18):
-    - Reports UI
+#Oct. 25, 2018 (10/25/18):
+    - Change Reports UI
+    - Added Session
+    - Added Share to Facebook & Twitter
+    - Change Admin Menu Background
     
 #Requirement/s:
     Project:

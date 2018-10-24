@@ -47,6 +47,10 @@
 		//Account Setting
 		Route::resource('/adminAccountSettings', 'adminAccountSettingsController');
 
+	//Session
+		Route::get('/session/remove','sessionController@deleteSession');
+
+
 //CUSTOMER SIDE
 	//Home
 	Route::resource('/','customerHomeController');

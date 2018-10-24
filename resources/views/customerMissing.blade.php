@@ -51,6 +51,22 @@
                                     <br/>
                                     <span>or call {{$missingDog -> strReporterContactNo}}</span>
                                 </div>
+                                <div class ="row">
+                                    <div class="mx-2">
+                                        <a class="twitter-share-button"
+                                            href="https://twitter.com/intent/tweet?text=Have%20you%20seen%20{{$missingDog -> strDogName}}%3F"
+                                            data-size="large">
+                                            Tweet
+                                        </a>
+                                    </div>
+                                    <div class="mr-2">
+                                        <div class="fb-share-button" data-href="http://127.0.0.1:8000/" data-layout="button" data-size="large" data-mobile-iframe="true">
+                                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                                            <span class="fa fa-facebook"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>  
                         </div>
                     @else

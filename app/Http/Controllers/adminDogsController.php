@@ -8,7 +8,10 @@ use App\DogList;
 
 class adminDogsController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+        if(!($request -> session() -> exists('login'))){
+            return redirect('/admin');
+        }
 
     	$allDog = DogList::ALL();
 

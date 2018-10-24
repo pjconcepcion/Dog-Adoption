@@ -23,6 +23,34 @@
     </head>
   
     <body>
+        <div id="fb-root"></div>
+        <script>
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=1996791573701166&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            window.twttr = (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+              if (d.getElementById(id)) return t;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+
+              t._e = [];
+              t.ready = function(f) {
+                t._e.push(f);
+              };
+
+              return t;
+            }(document, "script", "twitter-wjs"));
+        </script>
+
         <header role="banner">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
@@ -65,7 +93,6 @@
         <!-- END header -->
 
 @yield('content')
-
     <footer class="site-footer" role="contentinfo">
       <div class="container">
         <div class="row mb-5">
@@ -73,12 +100,21 @@
             <h3>About Furrytails</h3>
             <p class="mb-5">Furrytails is a website designed to help dogs in the impound to find a new forever home. Furrytails also aims to help pet owners in finding their lost pets.</p>
             <ul class="list-unstyled footer-link d-flex footer-social">
-              <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
-              <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
-              <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
-              <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+              <li class="mr-2">
+                <a class="twitter-share-button"
+                  href="https://twitter.com/intent/tweet?text=Adopt-a-Dog%20Now!"
+                  data-size="large">
+                  Tweet
+                </a>
+              </li>
+              <li class="mr-2">
+                <div class="fb-share-button" data-href="http://127.0.0.1:8000/" data-layout="button" data-size="large" data-mobile-iframe="true">
+                  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                    <span class="fa fa-facebook"></span>
+                  </a>
+                </div>
+              </li>
             </ul>
-
           </div>
           <div class="col-md-5 mb-5">
             <h3>Contact Info</h3>

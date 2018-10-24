@@ -10,8 +10,10 @@ use App\StrayReports;
 
 class adminStrayReportsController extends Controller
 {
-    public function index(){
-
+    public function index(Request $request){
+        if(!($request -> session() -> exists('login'))){
+            return redirect('/admin');
+        }
         $strayReport = StrayReports::All()->sortByDesc('dtReportDate');
 
     	return view('adminStrayReports')->with('strayReports', $strayReport);	

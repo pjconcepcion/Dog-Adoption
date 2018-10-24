@@ -10,7 +10,10 @@ use App\MissingReports;
 
 class adminMissingReportsController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+        if(!($request -> session() -> exists('login'))){
+            return redirect('/admin');
+        }
 
         $missingReport = MissingReports::All();
 

@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
-
+include('sessionController.php');
 
 class adminLoginController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+        if($request -> session() -> exists('login')){
+            return redirect('/adminDashboard');
+        }
         return view('adminLogin');
     }
 
@@ -23,6 +26,7 @@ class adminLoginController extends Controller
                     ->exists();
         
         if($user){
+            $request -> session() -> put('login',true);
             return redirect('/adminDashboard');
         }else{
             return redirect()->back()->withErrors(['errorLogin',true]);

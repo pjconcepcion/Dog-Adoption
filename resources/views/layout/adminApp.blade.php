@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	{{-- TITLE AND ICON --}}
 	<title>Furrytails Admin</title>
-	<link rel="icon" href={{asset("image/paw.ico")}}>
+	<link rel="icon" href={{asset("image/blackIcon.ico")}}>
 	{{-- END --}}
 <meta name="description" content="Sufee Admin - HTML5 Admin Template">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,7 @@
 
 
 <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-
+	
 {{-- FOR UPLOAD PIC --}}
 <style type="text/css">
     .gallery{
@@ -47,7 +47,6 @@
 
 </head>
 <body>
-
 	<!-- Left Panel -->
 
 	<aside id="left-panel" class="left-panel">
@@ -59,45 +58,45 @@
 	</button>
 	{{-- <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
 	<a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> --}}
-	<a class="navbar-brand" href="/adminDashboard"><img src="image/whiteBanner.png" alt="Furrytails"></a>
-	<a class="navbar-brand hidden" href="/adminDashboard"><img src="image/whiteIcon.png" alt="FT"></a>
+	<a class="navbar-brand" href="adminDashboard"><img src="image/whiteBanner.png" alt="Furrytails"></a>
+	<a class="navbar-brand hidden" href="adminDashboard"><img src="image/whiteIcon.png" alt="FT"></a>
 	</div>
 
 	<div id="main-menu" class="main-menu collapse navbar-collapse">
 	<ul class="nav navbar-nav">
 	    <li>
-	        <a href="/adminDashboard"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+	        <a href=" adminDashboard"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
 	    </li>
 	    <h3 class="menu-title">Dog Adoption</h3><!-- /.menu-title -->
 	    <li class="menu-item-has-children dropdown">
 	        <li>
-	            <a href="/adminDogs"> <i class="menu-icon fa fa-paw"></i>Dogs for Adoption</a>
+	            <a href="adminDogs"> <i class="menu-icon fa fa-paw"></i>Dogs for Adoption</a>
 	        </li>
 	        <li>
-	            <a href="/adminAdoptionRequest"> <i class="menu-icon fa fa-file-text"></i>Adoption Request </a>
+	            <a href="adminAdoptionRequest"> <i class="menu-icon fa fa-file-text"></i>Adoption Request </a>
 			</li>
 			<li>
-	            <a href="/adminApprovedApplication"> <i class="menu-icon fa fa-file-o"></i>Approved Application </a>
+	            <a href="adminApprovedApplication"> <i class="menu-icon fa fa-file-o"></i>Approved Application </a>
 	        </li>
 	    </li>
 
 
 	    <h3 class="menu-title">Messages</h3><!-- /.menu-title -->
 		<li>
-			<a href="/adminMissingReports"> <i class="menu-icon fa fa-exclamation-circle"></i>Missing Reports </a>
+			<a href="adminMissingReports"> <i class="menu-icon fa fa-exclamation-circle"></i>Missing Reports </a>
 		</li>
 
 	    <li>
-	        <a href="/adminStrayReports"> <i class="menu-icon fa fa-envelope"></i>Stray Reports</a>
+	        <a href="adminStrayReports"> <i class="menu-icon fa fa-envelope"></i>Stray Reports</a>
 	    </li>
 		
 	    <h3 class="menu-title">Account</h3><!-- /.menu-title -->
 
 	    <li>
-	        <a href="/adminAccountSettings"> <i class="menu-icon fa fa-gear"></i>Account Settings </a>
+	        <a href="adminAccountSettings"> <i class="menu-icon fa fa-gear"></i>Account Settings </a>
 	    </li>
 	    <li>
-	        <a href="/admin"> <i class="menu-icon fa fa-sign-out"></i>Logout </a>
+			<a href='/session/remove'><i class="menu-icon fa fa-sign-out"></i>Logout </a>
 	    </li>
 
 	</ul>

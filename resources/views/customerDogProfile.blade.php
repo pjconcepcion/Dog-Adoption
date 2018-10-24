@@ -9,6 +9,22 @@
                 <img class="element-animate rounded img-thumbnail" src = {{$dogLists -> imgDogPhoto}} />
             </div>
             <div class="px-4 py-1 element-animate">
+                <div class ="row">
+                    <div class="mx-2">
+                        <a class="twitter-share-button"
+                            href="https://twitter.com/intent/tweet?text=Do%20you%20want%20adopt%20{{$dogLists -> strDogName}}%3F"
+                            data-size="large">
+                            Tweet
+                        </a>
+                    </div>
+                    <div class="mr-2">
+                        <div class="fb-share-button" data-href="http://127.0.0.1:8000/" data-layout="button" data-size="large" data-mobile-iframe="true">
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                            <span class="fa fa-facebook"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <h2 class="mb-2">{{$dogLists -> strDogName}}</h2>
                 <div class="my-0">
                     <span>{{$dogLists -> strAge}}, {{$dogLists -> strSex}}</span>

@@ -10,7 +10,10 @@ use App\AdoptionRequest;
 
 class adminAdoptionRequestController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+        if(!($request -> session() -> exists('login'))){
+            return redirect('/admin');
+        }
 
         $adoptionRequest = DB::table('adoptionrequesttbl')
                              ->join('doglisttbl', 'adoptionrequesttbl.intDogID', '=', 'doglisttbl.intDogID')
