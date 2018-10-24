@@ -9,7 +9,7 @@
                 <div class="row justify-content-center mb-5 element-animate">
                     <div class="col-md-8 text-center">
                         <h1 class=" heading mb-4">File a Report</h1>
-                        <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                        <p class="mb-5 lead">Help us locate those dogs in need of a home. If you have seen a stray, contact us here. We'll take action and make sure to give those dogs a shelter.</p>
                     </div>
                 </div>
             </div>

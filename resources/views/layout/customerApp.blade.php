@@ -50,9 +50,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/missing">Missing</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
@@ -70,8 +70,8 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4 mb-5">
-            <h3>About The Breed</h3>
-            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus et dolor blanditiis consequuntur ex voluptates perspiciatis omnis unde minima expedita.</p>
+            <h3>About Furrytails</h3>
+            <p class="mb-5">Furrytails is a website designed to help dogs in the impound to find a new forever home. Furrytails also aims to help pet owners in finding their lost pets.</p>
             <ul class="list-unstyled footer-link d-flex footer-social">
               <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
               <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
@@ -85,18 +85,18 @@
             <ul class="list-unstyled footer-link">
               <li class="d-block">
                 <span class="d-block">Address:</span>
-                <span class="text-white">34 Street Name, City Name Here, United States</span></li>
-              <li class="d-block"><span class="d-block">Telephone:</span><span class="text-white">+1 242 4942 290</span></li>
-              <li class="d-block"><span class="d-block">Email:</span><span class="text-white">info@yourdomain.com</span></li>
+                <span class="text-white">Mayor Gil Fernando Ave., Marikina City</span></li>
+              <li class="d-block"><span class="d-block">Telephone:</span><span class="text-white">+63 929 477 8565</span></li>
+              <li class="d-block"><span class="d-block">Email:</span><span class="text-white">furrytails@gmail.com</span></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5">
             <h3>Quick Links</h3>
             <ul class="list-unstyled footer-link">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Disclaimers</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/adopt">Adopt-a-Dog</a></li>
+              <li><a href="/missing">Missing</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
           <div class="col-md-3">

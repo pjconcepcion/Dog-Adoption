@@ -9,7 +9,7 @@ use App\DogList;
 class customerHomeController extends Controller
 {
     public function index(){
-        $dogList = DogList::inRandomOrder()->take(6)->get();
+        $dogList = DogList::where('bitIsAdopted', '=', 0)->inRandomOrder()->take(6)->get();
 
         return view('customerHome')->with('dogLists', $dogList);
     }

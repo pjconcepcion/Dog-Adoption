@@ -84,17 +84,17 @@
           <div class="col-md-8 mx-auto contact-form-contact-info">
             <p class="d-flex">
               <span class="ion-ios-location icon mr-5"></span>
-              <span>34 Street Name, City Name Here, United States</span>
+              <span>Mayor Gil Fernando Ave., Marikina City</span>
             </p>
 
             <p class="d-flex">
               <span class="ion-ios-telephone icon mr-5"></span>
-              <span>+1 242 4942 290</span>
+              <span>+63 929 477 8565</span>
             </p>
 
             <p class="d-flex">
               <span class="ion-android-mail icon mr-5"></span>
-              <span>info@yourdomain.com</span>
+              <span>furrytails@gmail.com</span>
             </p>
           </div>
         </div>

@@ -9,7 +9,7 @@
                 <div class="row justify-content-center mb-5 element-animate">
                     <div class="col-md-8 text-center">
                         <h1 class=" heading mb-4">Missing Dog</h1>
-                        <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                        <p class="mb-5">It is an unfortunate thing to lose a beloved pet. We'll help us spread the word about it.</p>
                         <p><a href="/missing/file" class="btn btn-white btn-outline-white">File a missing report</a></p>
                     </div>
                 </div>

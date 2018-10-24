@@ -9,7 +9,7 @@
                 <div class="row justify-content-center mb-5 element-animate">
                     <div class="col-md-8 text-center">
                     <h1 class=" heading mb-4">Adopt-a-Dog</h1>
-                    <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                    <p class="mb-5 lead">Don't shop, adopt! Our team believes that adopting is better than shopping. Save a life, help us give a dog a forever home. Adopt now.</p>
                     </div>
                 </div>
             </div>

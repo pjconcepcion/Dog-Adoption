@@ -19,7 +19,7 @@
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate">
                         <h1>We Love Pets</h1>   
-                        <p class="mb-5">Don't shop, adopt! Save a life, help us give a dog a forever home. Adopt now.</p>
+                        <p class="mb-5">Don't shop, adopt! Our team believes that adopting is better than shopping. Save a life, help us give a dog a forever home. Adopt now.</p>
                         <p><a href="/adopt" class="btn btn-white btn-outline-white">Adopt-a-Dog</a></p>
                     </div>
                 </div>
@@ -41,20 +41,21 @@
                 <div class="row slider-text align-items-center justify-content-center">
                 <div class="col-md-8 text-center col-sm-12 element-animate">
                     <h1>Let us help!</h1>
-                    <p class="mb-5"></p>
+                    <p class="mb-5">It is an unfortunate thing to lose a beloved pet. We'll help us spread the word about it.</p>
                     <p><a href="/missing/file" class="btn btn-white btn-outline-white">File a missing report</a></p>
                 </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <!-- END slider -->
     <section class="section border-t">
         <div class="container">
             <div class="row justify-content-center mb-5 element-animate">
                 <div class="col-md-8 text-center">
                 <h2 class=" heading mb-4">Adopt-a-Dog</h2>
-                <p class="mb-5 lead">Our team believes that adopting is better than shopping for pets. </p>
+                <p class="mb-5 lead">Our team believes that adopting is better than shopping for pets. Help us save a life. Adopt one of these adorable dogs. Give a dog a forever home. Adopt now!</p>
                 </div>
             </div>
 
@@ -85,7 +86,7 @@
         <div class="row justify-content-center mb-5 element-animate">
             <div class="col-md-8 text-center">
             <h2 class=" heading mb-4">Have you seen this dogs?</h2>
-            <p class="mb-5 lead">It is an unfortunate thing to lose a pet.</p>
+            <p class="mb-5 lead">It is an unfortunate thing to lose a pet. Our heart breaks along with the owners of the missing pet. Let us help them. Be on the look out for these following pet.</p>
             </div>
         </div>
         <div class="col-md-8 text-center col-sm-12 element-animate mx-auto">
@@ -99,7 +100,7 @@
         <div class="row justify-content-center mb-5 element-animate">
             <div class="col-md-8 text-center">
             <h2 class=" heading mb-4">Help us find them</h2>
-            <p class="mb-5 lead">It is an unfortunate thing to lose a pet.</p>
+            <p class="mb-5 lead">Help us find and give strays a home. If you see a stray contact us immediately. We'll find them and give them a shelter.</p>
             </div>
         </div>
         <div class="col-md-8 text-center col-sm-12 element-animate mx-auto">
