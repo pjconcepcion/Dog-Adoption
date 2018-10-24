@@ -6,7 +6,10 @@
 	
 	// Dashboard
 	Route::resource('/adminDashboard', 'adminDashboardController');
-
+	Route::post('/adminDashboard/printDogAdoptionReport', 'adminDashboardController@printDogAdoptionReport');
+	Route::post('/adminDashboard/printStrayReport', 'adminDashboardController@printStrayReport');
+	Route::post('/adminDashboard/printMissingReport', 'adminDashboardController@printMissingReport');
+	
 	// Maintenance
 		//Dogs
 		Route::resource('/adminDogs', 'adminDogsController');

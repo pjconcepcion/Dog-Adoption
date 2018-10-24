@@ -25,9 +25,13 @@
 <link rel="stylesheet" href="css/cs-skin-elastic.css">
 <!-- <link rel="stylesheet" href="css/bootstrap-select.less"> -->
 <link rel="stylesheet" href="scss/style.css">
+<link rel="stylesheet" href="assets/scss/widgets.css">
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
 
 <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 
@@ -55,8 +59,8 @@
 	</button>
 	{{-- <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
 	<a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> --}}
-	<a class="navbar-brand" href="/adminDashboard">DOGS</a>
-	<a class="navbar-brand hidden" href="/adminDashboard">D</a>
+	<a class="navbar-brand" href="/adminDashboard"><img src="image/smBanner.png" alt="Furrytails"></a>
+	<a class="navbar-brand hidden" href="/adminDashboard"><img src="image/smLogo.png" alt="FT"></a>
 	</div>
 
 	<div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -122,6 +126,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+
+
+<script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!--  Chart js -->
+<script src="assets/js/lib/chart-js/Chart.bundle.js"></script>
+<script src="assets/js/widgets.js"></script>
+
 
 </body>
 </html>

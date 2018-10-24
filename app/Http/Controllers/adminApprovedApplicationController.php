@@ -42,14 +42,15 @@ class adminApprovedApplicationController extends Controller
 
         $completeID = $request -> input('applicationID');
         $dogID = $request -> input('dogID');
-
+        $dt = NOW();
+        
         DB::table('adoptionrequesttbl')
 			->where('intRequestID', $completeID)
             ->update(['bitCompleted' => 1]);
             
         DB::table('doglisttbl')
 			->where('intDogID', $dogID)
-			->update(['bitIsAdopted' => 1]);
+			->update(['bitIsAdopted' => 1, 'dtAdoptionDate'=> NOW()]);
 
         return redirect('/adminApprovedApplication');
     }
