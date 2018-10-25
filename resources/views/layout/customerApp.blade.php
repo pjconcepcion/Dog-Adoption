@@ -9,16 +9,16 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
 
-        <link rel="stylesheet" href={{assets("customer/css/bootstrap.css")}}>
-        <link rel="stylesheet" href={{assets("customer/css/animate.css")}}>
-        <link rel="stylesheet" href={{assets("customer/css/owl.carousel.min.css")}}>
-        <link rel="stylesheet" href={{assets("customer/fonts/ionicons/css/ionicons.min.css")}}>
-        <link rel="stylesheet" href={{assets("customer/fonts/fontawesome/css/font-awesome.min.css")}}>
+        <link rel="stylesheet" href={{asset("customer/css/bootstrap.css")}}>
+        <link rel="stylesheet" href={{asset("customer/css/animate.css")}}>
+        <link rel="stylesheet" href={{asset("customer/css/owl.carousel.min.css")}}>
+        <link rel="stylesheet" href={{asset("customer/fonts/ionicons/css/ionicons.min.css")}}>
+        <link rel="stylesheet" href={{asset("customer/fonts/fontawesome/css/font-awesome.min.css")}}>
       
         {{-- <link rel="stylesheet" href="customer/fonts/flaticon/font/flaticon.css"> --}}
 
         <!-- Theme Style -->
-        <link rel="stylesheet" href={{assets("customer/css/style.css")}}>
+        <link rel="stylesheet" href={{asset("customer/css/style.css")}}>
     </head>
   
     <body>
