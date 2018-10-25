@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>FURRYTAILS</title>
-        <link rel="icon" href={{asset("image/paw.ico")}}>
+        <link rel="icon" href="image/paw.ico">
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{csrf_token()}}">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,11 +12,10 @@
         <link rel="stylesheet" href={{asset("customer/css/bootstrap.css")}}>
         <link rel="stylesheet" href={{asset("customer/css/animate.css")}}>
         <link rel="stylesheet" href={{asset("customer/css/owl.carousel.min.css")}}>
-
         <link rel="stylesheet" href={{asset("customer/fonts/ionicons/css/ionicons.min.css")}}>
         <link rel="stylesheet" href={{asset("customer/fonts/fontawesome/css/font-awesome.min.css")}}>
       
-        {{-- <link rel="stylesheet" href={{asset("customer/fonts/flaticon/font/flaticon.css")}}> --}}
+        {{-- <link rel="stylesheet" href="customer/fonts/flaticon/font/flaticon.css"> --}}
 
         <!-- Theme Style -->
         <link rel="stylesheet" href={{asset("customer/css/style.css")}}>
@@ -99,18 +98,19 @@
           <div class="col-md-4 mb-5">
             <h3>About Furrytails</h3>
             <p class="mb-5">Furrytails is a website designed to help dogs in the impound to find a new forever home. Furrytails also aims to help pet owners in finding their lost pets.</p>
-            <ul class="list-unstyled footer-link d-flex footer-social">
-              <li class="mr-2">
+            <ul class="list-unstyled footer-link d-flex ">
+              <li class="mr-3">
                 <a class="twitter-share-button"
                   href="https://twitter.com/intent/tweet?text=Adopt-a-Dog%20Now!"
-                  data-size="large">
-                  Tweet
+                  data-size="large"
+                  target="_blank">
+                  {{-- <span class="fa fa-twitter"></span> --}}
                 </a>
               </li>
-              <li class="mr-2">
-                <div class="fb-share-button" data-href="http://127.0.0.1:8000/" data-layout="button" data-size="large" data-mobile-iframe="true">
+              <li class="mr-3">
+                <div class="fb-share-button" data-href="https://dogadoption.herokuapp.com" data-layout="button" data-size="large" data-mobile-iframe="true">
                   <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                    <span class="fa fa-facebook"></span>
+                    {{-- <span class="fa fa-facebook"></span> --}}
                   </a>
                 </div>
               </li>

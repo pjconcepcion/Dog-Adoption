@@ -150,28 +150,28 @@
                                         <label class="px-2" for="chkBoxDog"> Dog </label>
                                     </div>
                                     <div class = "row no-gutters px-2">
-                                        <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Cat" name = "petOwned[]"/>
-                                        <label class="px-2" for="chkBoxDog"> Cat </label>
+                                        <input class="mt-2" type="checkbox" id="chkBoxCat" value = "Cat" name = "petOwned[]"/>
+                                        <label class="px-2" for="chkBoxCat"> Cat </label>
                                     </div>
                                     <div class = "row no-gutters px-2">
-                                        <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Bird" name = "petOwned[]"/>
-                                        <label class="px-2" for="chkBoxDog"> Bird </label>
+                                        <input class="mt-2" type="checkbox" id="chkBoxBird" value = "Bird" name = "petOwned[]"/>
+                                        <label class="px-2" for="chkBoxBird"> Bird </label>
                                     </div>
                                     <div class = "row no-gutters px-2">
-                                        <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Snake" name = "petOwned[]"/>
-                                        <label class="px-2" for="chkBoxDog"> Snake </label>
+                                        <input class="mt-2" type="checkbox" id="chkBoxSnake" value = "Snake" name = "petOwned[]"/>
+                                        <label class="px-2" for="chkBoxSnake"> Snake </label>
                                     </div>
                                     <div class = "row no-gutters px-2">
-                                        <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Lizard" name = "petOwned[]"/>
-                                        <label class="px-2" for="chkBoxDog"> Lizard </label>
+                                        <input class="mt-2" type="checkbox" id="chkBoxLizard" value = "Lizard" name = "petOwned[]"/>
+                                        <label class="px-2" for="chkBoxLizard"> Lizard </label>
                                     </div>
                                     <div class = "row no-gutters px-2">
-                                        <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Rabbit" name = "petOwned[]"/>
-                                        <label class="px-2" for="chkBoxDog"> Rabbit </label>
+                                        <input class="mt-2" type="checkbox" id="chkBoxRabbit" value = "Rabbit" name = "petOwned[]"/>
+                                        <label class="px-2" for="chkBoxRabbit"> Rabbit </label>
                                     </div>
                                     <div class = "row no-gutters px-2">
-                                        <input class="mt-2" type="checkbox" id="chkBoxDog" value = "Fish" name = "petOwned[]"/>
-                                        <label class="px-2" for="chkBoxDog"> Fish </label>
+                                        <input class="mt-2" type="checkbox" id="chkBoxFish" value = "Fish" name = "petOwned[]"/>
+                                        <label class="px-2" for="chkBoxFish"> Fish </label>
                                     </div>
                                 </div>
                             </div>

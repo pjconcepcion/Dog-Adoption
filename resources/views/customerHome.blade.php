@@ -90,7 +90,7 @@
             </div>
         </div>
         <div class="col-md-8 text-center col-sm-12 element-animate mx-auto">
-            <p><a href="/adopt" class="btn btn-block btn-outline-black">View Missing Dogs</a></p>
+            <p><a href="/missing" class="btn btn-block btn-outline-black">View Missing Dogs</a></p>
         </div>
     </div>
 </section>
@@ -104,7 +104,7 @@
             </div>
         </div>
         <div class="col-md-8 text-center col-sm-12 element-animate mx-auto">
-            <p><a href="/adopt" class="btn btn-block btn-outline-black">Contact Us</a></p>
+            <p><a href="/contact" class="btn btn-block btn-outline-black">Contact Us</a></p>
         </div>
     </div>
 </section>
