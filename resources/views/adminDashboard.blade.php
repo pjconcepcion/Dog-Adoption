@@ -10,21 +10,6 @@
         <div class="header-menu">
             <div class="col-sm-7">
                 <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                <div class="header-left">
-                    <div class="dropdown for-notification">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-bell"></i>
-                        <span class="count bg-danger">10</span>
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="notification">
-                        <p class="red">You have 10 Notification</p>
-                        <a class="dropdown-item media bg-flat-color-1" href="#">
-                            <i class="fa fa-minus"></i>
-                            <p>Server #1 overloaded.</p>
-                        </a>
-                      </div>
-                    </div>
-                </div>
             </div>
         </div>
     </header><!-- /header -->
