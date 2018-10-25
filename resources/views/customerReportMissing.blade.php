@@ -8,8 +8,8 @@
         <div class="row slider-text align-items-center justify-content-center">
                 <div class="row justify-content-center mb-5 element-animate">
                     <div class="col-md-8 text-center">
-                        <h1 class=" heading mb-4">File a Report</h1>
-                        <p class="mb-5 lead">Help us locate those dogs in need of a home. If you have seen a stray, contact us here. We'll take action and make sure to give those dogs a shelter.</p>
+                        <h1 class=" heading mb-4">File a Missing Report</h1>
+                        <p class="mb-5 lead">Our heart breaks when a pet is seperated from its owner. Let us help by spreading the word of your missing pets.</p>
                     </div>
                 </div>
             </div>
@@ -86,17 +86,17 @@
                 <div class="col-md-8 mx-auto contact-form-contact-info">
                     <p class="d-flex">
                     <span class="ion-ios-location icon mr-5"></span>
-                    <span>34 Street Name, City Name Here, United States</span>
+                    <span>Mayor Gil Fernando Ave., Marikina City</span>
                     </p>
         
                     <p class="d-flex">
                     <span class="ion-ios-telephone icon mr-5"></span>
-                    <span>+1 242 4942 290</span>
+                    <span>+63 929 477 8565</span>
                     </p>
         
                     <p class="d-flex">
                     <span class="ion-android-mail icon mr-5"></span>
-                    <span>info@yourdomain.com</span>
+                    <span>furrytails@gmail.com</span>
                     </p>
                 </div>
                 </div>
