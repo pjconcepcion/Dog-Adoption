@@ -56,6 +56,47 @@
             </div>
         </div>
     </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <center><strong class="card-title mb-3"><i class="fa fa-edit"></i> Change Username and Password</strong></center>
+            </div>
+            <div class="card-body">
+                 <form enctype="multipart/form-data" autocomplete="off" action="/adminDogs/insertDog" method="post" id="addDog" class="form-horizontal">
+                    
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                    <div class="row form-group">
+                        <div class="col col-md-3">
+                            <label for="text-input" class=" form-control-label">Username</label>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <input type="text" id="text-input" name="condition" placeholder="" class="form-control">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3">
+                            <label for="text-input" class=" form-control-label">Password</label>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <input type="text" id="text-input" name="condition" placeholder="" class="form-control">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <center>
+                            <input type="submit" class="btn btn-primary btn-sm" value="Submit">
+                            <button type="reset" class="btn btn-danger btn-sm" onclick="resetImg()">
+                              <i class="fa fa-ban"></i> Reset
+                            </button>
+                        </center>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
 </div> <!-- .content -->
 <!-- /#right-panel -->
 
