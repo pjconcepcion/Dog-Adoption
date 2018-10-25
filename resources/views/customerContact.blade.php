@@ -104,6 +104,29 @@
 </section>
       
       
+<script>
+  var form = new FormData();
+  form.append("ids[]", "{{imageHash}}");
+  form.append("ids[]", "{{imageHash2}}");
+
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://api.imgur.com/3/album/{{albumHash}}/add",
+    "method": "POST",
+    "headers": {
+      "Authorization": "Bearer {{accessToken}}"
+    },
+    "processData": false,
+    "contentType": false,
+    "mimeType": "multipart/form-data",
+    "data": form
+  }
+
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+</script>
       {{-- <sectioion> --}}
       <!-- END section -->
 
