@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="customer/css/bootstrap.css">
         <link rel="stylesheet" href="customer/css/animate.css">
         <link rel="stylesheet" href="customer/css/owl.carousel.min.css">
-
+        // mysql://bdecfc526ba4f9:805e39af@us-cdbr-iron-east-01.cleardb.net/heroku_9b86d3a5f159e85?reconnect=true
         <link rel="stylesheet" href="customer/fonts/ionicons/css/ionicons.min.css">
         <link rel="stylesheet" href="customer/fonts/fontawesome/css/font-awesome.min.css">
       
