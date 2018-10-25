@@ -99,18 +99,19 @@
           <div class="col-md-4 mb-5">
             <h3>About Furrytails</h3>
             <p class="mb-5">Furrytails is a website designed to help dogs in the impound to find a new forever home. Furrytails also aims to help pet owners in finding their lost pets.</p>
-            <ul class="list-unstyled footer-link d-flex footer-social">
-              <li class="mr-2">
+            <ul class="list-unstyled footer-link d-flex ">
+              <li class="mr-3">
                 <a class="twitter-share-button"
                   href="https://twitter.com/intent/tweet?text=Adopt-a-Dog%20Now!"
-                  data-size="large">
-                  Tweet
+                  data-size="large"
+                  target="_blank">
+                  {{-- <span class="fa fa-twitter"></span> --}}
                 </a>
               </li>
-              <li class="mr-2">
+              <li class="mr-3">
                 <div class="fb-share-button" data-href="http://127.0.0.1:8000/" data-layout="button" data-size="large" data-mobile-iframe="true">
                   <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                    <span class="fa fa-facebook"></span>
+                    {{-- <span class="fa fa-facebook"></span> --}}
                   </a>
                 </div>
               </li>
