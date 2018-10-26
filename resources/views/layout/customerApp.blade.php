@@ -24,6 +24,7 @@
     <body>
         <div id="fb-root"></div>
         <script>
+          //Facebook
           (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -31,7 +32,8 @@
             js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=1996791573701166&autoLogAppEvents=1';
             fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
-
+          
+          //Twitter
             window.twttr = (function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0],
                 t = window.twttr || {};
