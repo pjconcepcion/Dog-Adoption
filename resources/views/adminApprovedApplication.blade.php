@@ -335,7 +335,7 @@
         <div class="modal-content">
 
         <div class="modal-header">
-            <h4 class="modal-title"></b><i class="fa fa-times-circle-o"></i> Dissaprove Application</h4>
+            <h4 class="modal-title"></b><i class="fa fa-times-circle-o"></i> Disaprove Application</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>  
         </div>
 
