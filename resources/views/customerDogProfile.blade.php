@@ -97,7 +97,7 @@
     <div class = "container">
         <div class="half d-md-flex d-block my-3">
             <div class = "crop">
-                <img class="element-animate rounded img-thumbnail" src = {{$dogLists -> imgDogPhoto}} />
+                <img class="element-animate rounded img-thumbnail" src = '../{{$dogLists -> imgDogPhoto}}'/>
             </div>
             <div class="px-4 py-1 element-animate">
                 <div class ="row">
