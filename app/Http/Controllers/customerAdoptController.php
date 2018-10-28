@@ -10,7 +10,7 @@ use App\AdoptionRequest;
 class customerAdoptController extends Controller
 {
     public function index(){
-        $dogList = DogList::where('bitISAdopted', '=', 0)->paginate(20);
+        $dogList = DogList::where('bitISAdopted', '=', 0)->paginate(16);
         return view('customerAdopt')->with('dogLists',$dogList);
     }
 
