@@ -108,9 +108,11 @@
                             @endif
                         </tr>
                     @endforeach
+                        <tr>
+                            <td colspan = '5'>{{$allDogs -> links()}} </td>
+                        </tr>
                   </tbody>
                 </table>
-
             </div>
         </div>
     </div>
