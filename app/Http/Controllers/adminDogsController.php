@@ -13,7 +13,7 @@ class adminDogsController extends Controller
             return redirect('/admin');
         }
 
-    	$allDog = DogList::paginate(20);
+    	$allDog = DogList::paginate(15);
 
     	return view('adminDogs')->with('allDogs', $allDog);
     	
