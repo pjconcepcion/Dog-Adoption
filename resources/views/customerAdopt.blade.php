@@ -26,7 +26,7 @@
                         <h3>{{$dogList -> strSex}}, {{$dogList -> strAge}}</h3>
                         <span class=" icon">{{$dogList -> strDogName}}</span>
                         <div class = "crop">
-                            <img src="{{$dogList -> imgDogPhoto}}" alt="Image placeholder" class="img-fluid">
+                            <img src="{{$dogList -> imgDogPhoto}}" alt="Image placeholder" class="img-fluid" alt="{{$dogList -> strDogName}}">
                         </div>
                     </a>
                 </div>
