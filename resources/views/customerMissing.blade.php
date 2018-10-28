@@ -29,7 +29,7 @@
                     @if($key%2==0)
                         <div class="half d-md-flex d-block">
                             <div class = "crop">
-                                <img class="element-animate rounded img-thumbnail" src = {{$missingDog -> imgDogMissing}} />
+                                <img class="element-animate rounded img-thumbnail" src = "{{$missingDog -> imgDogMissing}}" />
                             </div>
                             <div class="px-4 py-1 element-animate">
                                 <h2 class="mb-2">{{$missingDog -> strDogName}}</h2>
@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                             <div class = "crop">
-                                <img class="element-animate rounded img-thumbnail" src = {{$missingDog -> imgDogMissing}} />
+                                <img class="element-animate rounded img-thumbnail" src = "{{$missingDog -> imgDogMissing}}"/>
                             </div>  
                         </div>
                     @endif
