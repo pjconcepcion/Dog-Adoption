@@ -109,7 +109,7 @@
                         </a>
                     </div>
                     <div class="mr-2">
-                    <div class="fb-share-button" data-href="https://dogadoption.herokuapp.com/adopt/{{$dogLists -> intDogID}}" data-layout="button" data-size="large" data-mobile-iframe="true">
+                        <div class="fb-share-button" data-href="https://dogadoption.herokuapp.com/adopt/{{$dogLists -> intDogID}}" data-layout="button" data-size="large" data-mobile-iframe="true">
                             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
                             <span class="fa fa-facebook"></span>
                             </a>

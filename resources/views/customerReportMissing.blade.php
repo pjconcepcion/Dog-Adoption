@@ -288,44 +288,44 @@
   
 <script src="../customer/js/jquery-3.2.1.min.js"></script>
 <script>
-    $.ajax({
-        url: "https://api.imgur.com/oauth2/authorize?client_id=bc0b038c2f990f3&response_type=token&state=",
-        cache: false,
-        success: function(html){
-            $('#myModal').html(html);
-        }
-    });
-    var accessToken;
-    var form = new FormData();
-    form.append("refresh_token", "70092291f3e9f5a3ba3ad11c0959fd3b033a8d9f");
-    form.append("client_id", "bc0b038c2f990f3");
-    form.append("client_secret", "373e9478d99f45ba3fa35b33f388f7aa70aeb291");
-    form.append("grant_type", "refresh_token");
+    // $.ajax({
+    //     url: "https://api.imgur.com/oauth2/authorize?client_id=bc0b038c2f990f3&response_type=token&state=",
+    //     cache: false,
+    //     success: function(html){
+    //         $('#myModal').html(html);
+    //     }
+    // });
+    // var accessToken;
+    // var form = new FormData();
+    // form.append("refresh_token", "70092291f3e9f5a3ba3ad11c0959fd3b033a8d9f");
+    // form.append("client_id", "bc0b038c2f990f3");
+    // form.append("client_secret", "373e9478d99f45ba3fa35b33f388f7aa70aeb291");
+    // form.append("grant_type", "refresh_token");
 
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://api.imgur.com/oauth2/token",
-        "method": "POST",
-        "headers": {},
-        "processData": false,
-        "contentType": false,
-        "mimeType": "multipart/form-data",
-        "data": form
-    }
+    // var settings = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "https://api.imgur.com/oauth2/token",
+    //     "method": "POST",
+    //     "headers": {},
+    //     "processData": false,
+    //     "contentType": false,
+    //     "mimeType": "multipart/form-data",
+    //     "data": form
+    // }
 
-    $.ajax(settings).done(function (response) {
-        var res = JSON.parse(response);
-        accessToken = res.access_token;
-        console.log(accessToken);
-        $.ajax({
-            url: "https://api.imgur.com/oauth2/token?client_id=",
-            cache: false,
-            success: function(html){
-            //   console.log(html);
-            }
-        });
-    });
+    // $.ajax(settings).done(function (response) {
+    //     var res = JSON.parse(response);
+    //     accessToken = res.access_token;
+    //     console.log(accessToken);
+    //     $.ajax({
+    //         url: "https://api.imgur.com/oauth2/token?client_id=",
+    //         cache: false,
+    //         success: function(html){
+    //              console.log(html);
+    //         }
+    //     });
+    // });
 
     $(function() {
         var imagesPreview = function(input, placeToInsertImagePreview) {
