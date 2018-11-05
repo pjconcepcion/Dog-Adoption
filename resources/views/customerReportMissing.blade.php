@@ -226,7 +226,7 @@
           <ul class="list-unstyled footer-link">
             <li class="d-block">
               <span class="d-block">Address:</span>
-              <span class="text-white">Mayor Gil Fernando Ave., Marikina City</span></li>
+              <span class="text-white">Marikina City</span></li>
             <li class="d-block"><span class="d-block">Telephone:</span><span class="text-white">+63 929 477 8565</span></li>
             <li class="d-block"><span class="d-block">Email:</span><span class="text-white">furrytails@gmail.com</span></li>
           </ul>
