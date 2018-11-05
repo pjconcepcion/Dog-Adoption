@@ -176,7 +176,7 @@
                 <div class="col-md-8 mx-auto contact-form-contact-info">
                     <p class="d-flex">
                     <span class="ion-ios-location icon mr-5"></span>
-                    <span>Mayor Gil Fernando Ave., Marikina City</span>
+                    <span>Marikina City</span>
                     </p>
         
                     <p class="d-flex">
